@@ -1,0 +1,167 @@
+/* ----------------------------------- 学习路径主页 ----------------------------------- */
+.path-index-banner {
+    min-width: 1129px;
+    height: 320px;
+    background: url("../image/paths-list-banner.png") no-repeat center center;
+}
+.paths-item {
+    margin-left: -30px;
+    overflow: hidden;
+}
+.paths-item li {
+    float: left;
+    width: 45%;
+    margin: 20px 0 20px 40px;
+}
+.paths-box {
+    display: block;
+    padding: 40px 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+.paths-box:hover {
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+.paths-box:hover .paths-btn {
+    background-color: #d2322d;
+    color: #fff;
+}
+.paths-info-content {
+    float: left;
+    width: 70%;
+}
+.paths-info-content .paths-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.paths-info-content .paths-desc {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #444;
+    line-height: 24px;
+    max-height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.paths-logo {
+    float: right;
+    width: 110px;
+    height: 110px;
+}
+.paths-logo .paths-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.paths-meta {
+    margin-top: 25px;
+}
+.paths-meta-info {
+    float: right;
+    font-size: 14px;
+    color: #666;
+    line-height: 38px;
+}
+.paths-meta-info .dot-icon {
+    margin: 0 5px;
+}
+.paths-btn {
+    float: left;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #fff;
+    border: 1px solid #d2322d;
+    font-size: 14px;
+    color: #d2322d;
+    border-radius: 20px;
+    text-align: center;
+}
+.paths-box:hover .paths-btn {
+    background-color: #d2322d;
+    color: #fff;
+}
+
+
+
+/* ----------------------------------- 学习路径列表页  ----------------------------------- */
+
+body { background-color: #f9f9f9; }
+
+.path-banner { box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
+.path-banner-inner { position: relative; max-width: 1230px; margin: 0 auto; }
+.path-banner-addon { position: absolute; top: 6px; left: 4px; }
+.path-banner-addon > a { display: block; }
+.path-banner-addon .addon-icon { display: inline-block; width: 5vw; min-width: 18px; max-width: 64px; }
+.path-banner-addon .addon-title { display: inline-block; margin-left: 2px; font-size: 12px; color: #fff; vertical-align: middle; }
+
+
+/* 课程列表 */
+.path-content { max-width: 1140px; min-height: 400px; margin: 4% auto; }
+
+.path-info-item { background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.1); border-radius: 6px; }
+.path-info-item + .path-info-item  { margin-top: 4%; }
+
+.path-info-header { padding: 12px 15px; }
+.path-info-header .path-info-title { font-size: 16px; font-weight: 500; color: #333; }
+.path-info-header .path-info-title::before { content: ""; display: inline-block; margin: 4px 8px 0 0; border-width: 8px 0 8px 8px; border-style: solid; border-color: transparent transparent transparent #fe6a00; vertical-align: top; }
+.path-info-header .path-info-desc { margin-top: 8px; font-size: 14px; color: #666; }
+.path-info-header .path-info-desc img { display: block; width: 100%; margin-top: 10px; }
+
+.path-focus-img { overflow: hidden; display: block; height: 17.5438596vw; margin-bottom: 4%; border-radius: 6px; background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; }
+
+.path-course-list .path-course-wrapper { margin-bottom: 12px; padding: 0 15px; color: #333; -webkit-transition: color .24s; transition: color .24s; }
+.path-course-list .path-course-wrapper:hover { color: #fe6a00; }
+.path-course-list .path-course-wrapper .path-course-img { position: relative; overflow: hidden; border-radius: 6px; transition: all .24s; }
+.path-course-list .path-course-wrapper:hover .path-course-img { box-shadow: 0 3px 5px rgba(0,0,0,.3); }
+.path-course-list .path-course-wrapper .path-course-img .view-number { position: absolute; right: 6px; bottom: 6px; min-width: 30px; padding: 0 6px; font-size: 12px; line-height: 18px; color: #fff; border-radius: 8px; background-color: rgba(0, 0, 0, .4); }
+.path-course-list .path-course-wrapper .path-course-img .view-number .view-ico { display: inline-block; width: 16px; height: 16px; vertical-align: text-top; background: url("../image/course-view-ico.png") no-repeat center center/12px 12px; }
+
+.path-course-list .path-course-name { height: 1.5em; margin-top: 8px; font-size: 15px; font-weight: 600; }
+.path-course-list .path-course-desc { height: 3em; margin-top: 6px; font-size: 13px; color: #666; }
+
+
+/* 底部 */
+#m-footer { padding: 20px 0; font-size: 14px; text-align: center; color: #666; }
+#m-footer a { color: #d2322d; }
+
+#footer_item { display: none; }
+
+
+@media (min-width: 768px) {
+    .path-banner-addon { top: 8px; }
+    .path-banner-addon .addon-title { font-size: 18px; }
+
+    .path-course-list .path-course-wrapper { margin-bottom: 24px; padding: 0 36px; }
+
+    .path-focus-img { width: 100%; max-height: 100px; background-position: 0 50%; background-size: auto; }
+}
+
+@media (min-width: 992px) {
+    .path-banner-addon { top: 12px; }
+    .path-banner-addon .addon-title { font-size: 24px; }
+
+    .path-content {margin: 3% auto;}
+
+    .path-info-header { padding: 24px 12px; text-align: center; }
+    .path-info-header .path-info-title { font-size: 24px; }
+    .path-info-header .path-info-title::before { margin-top: 10px; }
+    .path-info-header .path-info-desc { margin-top: 20px; font-size: 16px; }
+
+    .path-course-list .path-course-wrapper { margin-bottom: 24px; padding: 0 24px; }
+
+    #m-footer { display: none; }
+    #footer_item { display: block; }
+}

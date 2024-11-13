@@ -1,0 +1,539 @@
+
+/* --------------------- 分类 VIP --------------------- */
+
+/* PopoverCard */
+.popcard-mask, .popcard-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+.popcard-mask { z-index: 1000; background-color: rgba(0, 0, 0, .45); -webkit-animation: fadeIn 0.2s linear forwards; animation: fadeIn 0.2s linear forwards; }
+.popcard-wrap { z-index: 1000; }
+
+.popcard { position: absolute; width: 240px; -webkit-animation: easeIn 0.2s linear forwards; animation: easeIn 0.2s linear forwards; }
+.popcard-placement-top { padding-bottom: 16px; }
+.popcard-placement-bottom { padding-top: 16px; }
+
+.popcard-inner { position: relative; border-radius: 3px; background-color: #fff; }
+.popcard-title { padding: 7px 8px; color: #17233d; font-size: 14px; font-weight: 700; line-height: 18px; }
+.popcard-title > .decorate { content: ""; display: inline-block; width: 4px; height: 18px; margin-right: 6px; vertical-align: top; border-radius: 2px; }
+.popcard-content { padding: 7px 8px; }
+.popcard-arrow { position: absolute; z-index: -1; width: 16px; height: 16px; background-color: #fff; 
+    -webkit-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+}
+.popcard-placement-top .popcard-arrow { bottom: -4px; }
+.popcard-placement-bottom .popcard-arrow { top: -4px; }
+.popcard-close { position: absolute; top: 8px; right: 9px; z-index: 1; color: #999; }
+.popcard-close > .i-icon { font-size: 19px; vertical-align: top; }
+
+
+/* 会员特权图标 */
+.vip-priv-icon { background: url("../image/vip-priv-sprite3.png") no-repeat top left/500% 200%; }
+.vip-priv-icon-viptag { background-position: 0 0; }
+.vip-priv-icon-minic { background-position: 25% 0; }
+.vip-priv-icon-vouth { background-position: 50% 0; }
+.vip-priv-icon-exam { background-position: 75% 0; }
+.vip-priv-icon-cert { background-position: 100% 0; }
+.vip-priv-icon-download { background-position: 0 100%; }
+.vip-priv-icon-integral { background-position: 25% 100%; }
+.vip-priv-icon-download-pc { background-position: 50% 100%; }
+.vip-priv-icon-noad { background-position: 75% 100%; }
+
+
+/* ↓↓↓↓↓↓↓ 主题色 ↓↓↓↓↓↓↓ */
+.theme-c { color: #f9934e; }
+.theme-bgc { background-color: #ff8937; }
+.theme-icon-bgc { background-color: #fcf2ed; }
+
+.lg-theme-bgc { background-color: transparent; }
+.lg-theme-icon-bgc { background-color: transparent; }
+
+/* 前端开发 */
+.gid-2880 .theme-c { color: #f9934e; }
+.gid-2880 .theme-bgc { background-color: #f9934e; }
+.gid-2880 .theme-icon-bgc { background-color: #fcf2ed; }
+
+@media (min-width: 992px) {
+    .gid-2880 .lg-theme-bgc { background-color: #f9934e; }
+    .gid-2880 .lg-theme-icon-bgc { background-color: #fcf2ed; }
+}
+
+/* Java */
+.gid-2882 .theme-c { color: #f96262; }
+.gid-2882 .theme-bgc { background-color: #f96262; }
+.gid-2882 .theme-icon-bgc { background-color: #fcebed; }
+
+@media (min-width: 992px) {
+    .gid-2882 .lg-theme-bgc { background-color: #f96262; }
+    .gid-2882 .lg-theme-icon-bgc { background-color: #fcebed; }
+}
+
+/* Python */
+.gid-2883 .theme-c { color: #a069f7; }
+.gid-2883 .theme-bgc { background-color: #a069f7; }
+.gid-2883 .theme-icon-bgc { background-color: #f7f3ff; }
+
+@media (min-width: 992px) {
+    .gid-2883 .lg-theme-bgc { background-color: #a069f7; }
+    .gid-2883 .lg-theme-icon-bgc { background-color: #f7f3ff; }
+}
+
+/* 编程基础与数据库 */
+.gid-2886 .theme-c { color: #50bc35; }
+.gid-2886 .theme-bgc { background-color: #50bc35; }
+.gid-2886 .theme-icon-bgc { background-color: #eefceb; }
+
+@media (min-width: 992px) {
+    .gid-2886 .lg-theme-bgc { background-color: #50bc35; }
+    .gid-2886 .lg-theme-icon-bgc { background-color: #eefceb; }
+}
+
+/* 后端开发 */
+.gid-2887 .theme-c { color: #4d8ced; }
+.gid-2887 .theme-bgc { background-color: #4a8ced; }
+.gid-2887 .theme-icon-bgc { background-color: #e8eff7; }
+
+@media (min-width: 992px) {
+    .gid-2887 .lg-theme-bgc { background-color: #4a8ced; }
+    .gid-2887 .lg-theme-icon-bgc { background-color: #e8eff7; }
+}
+
+
+/* ↓↓↓↓↓↓↓ page ↓↓↓↓↓↓↓ */
+body { overflow-x: hidden; }
+hr.divider { max-width: 1140px; margin: 72px auto; height: 1px; border: none; background-color: rgba(28, 31, 33, 0.1); }
+
+#header_item, #footer_item { display: none; }
+@media (min-width: 992px) {
+    body { background-color: #fff; }
+    .header-mobile-item { display: none; }
+    #header_item, #footer_item { display: block; }
+}
+
+.clsvip-main { position: relative; top: -32px; padding-bottom: 10px; }
+.clsvip-section { padding: 24px 15px; }
+.clsvip-section:nth-of-type(2n) { background-color: #f9f9f9; }
+.clsvip-section:nth-of-type(2n+1) { background-color: #fff; }
+.clsvip-section-title { font-size: 18px; font-weight: 700; line-height: 1; text-align: center; }
+.clsvip-section-subtitle { margin-top: 8px; font-size: 14px; color: #666; text-align: center; }
+.clsvip-section-content { margin-top: 18px; }
+.clsvip-section .hl { margin: 0 0.25em; color: #fe6a00; font-weight: bold;}
+
+@media (min-width: 992px) {
+    .clsvip-main { top: -60px; margin-bottom: -60px; padding-bottom: 0; }
+    .clsvip-section { padding-top: 64px; padding-bottom: 64px; }
+    .clsvip-section-inner { max-width: 1140px; margin: 0 auto; }
+    .clsvip-section-title { font-size: 32px; }
+    .clsvip-section-subtitle { margin-top: 16px; font-size: 18px; }
+    .clsvip-section-content { margin-top: 32px; }
+}
+
+
+/* 分类 VIP 导航 */
+.clsvip-menu-title { display: inline-block; font-size: 16px; font-weight: 600; }
+.clsvip-menu-title .title-icon { margin-right: 6px; }
+.clsvip-menu-title .title-word { vertical-align: middle; }
+.clsvip-menu-submenu-wrap { position: relative; margin-left: 120px; }
+.clsvip-menu-submenu { display: inline-block; line-height: 36px; cursor: pointer; }
+.clsvip-menu-submenu-title { display: inline-block; font-size: 16px; vertical-align: top; }
+.clsvip-menu-submenu-title::after { content: ""; display: inline-block; margin-left: 6px; border-width: 5px 5px 0 5px; border-style: solid; border-color: #fff transparent transparent transparent; vertical-align: middle;
+    -webkit-transition: all .24s;
+            transition: all .24s;
+}
+.clsvip-menu-submenu-dropdown { position: absolute; top: 100%; left: 0; z-index: 99; overflow: hidden;
+    -webkit-transition: all .24s ease-in-out;
+            transition: all .24s ease-in-out;
+    -webkit-transform-origin: center top;
+        -ms-transform-origin: center top;
+            transform-origin: center top;
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+}
+.clsvip-menu-submenu-dropdown-inner { overflow: hidden; border-radius: 4px; background-color: #fff; }
+.clsvip-menu-submenu-dropdown-inner a { display: block; padding: 4px 14px; font-size: 14px; color: #333; -webkit-transition: all .24s; transition: all .24s; }
+.clsvip-menu-submenu-dropdown-inner a:hover { color: #fe6a00; background-color: #f5f5f5; }
+.clsvip-menu-submenu:hover .clsvip-menu-submenu-title::after { 
+    -webkit-transform: rotateX(180deg); 
+        -ms-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+}
+.clsvip-menu-submenu:hover .clsvip-menu-submenu-dropdown {
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
+}
+
+
+/* 按钮 */
+.paybar-btn { display: inline-block; padding: 4px 14px; font-size: 14px; font-weight: 700;border-radius: 15px; background-color: #fe6a00; color: #fff;
+    -webkit-transition: background-color .24s;
+            transition: background-color .24s;
+}
+.paybar-btn:hover { background-color: rgba(254, 106, 0, 0.65); }
+.paybar-btn-second { color: #fe6a00; background-color: rgba(237, 124, 48, 0.1); }
+.paybar-btn-second:hover { color: #fe6a00; background-color: rgba(237, 124, 48, 0.1); }
+
+
+/* ======= banner ======= */
+.clsvip-banner { position: relative; }
+
+@media (min-width: 992px) {
+    .clsvip-banner { max-width: 1240px; margin: 0 auto; }
+    .clsvip-banner .clsvip-menu { position: absolute; top: 0; left: 0; right: 0; padding-top: 12px; color: #fff; }
+}
+
+
+/* ======= 购买 Bar ======= */
+#paybar-section { background-color: transparent; padding-top: 0; padding-bottom: 12px; }
+.clsvip-paybar { display: table; width: 100%; height: 64px; padding: 0 15px; border-radius: 6px; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
+.clsvip-paybar > div { display: table-cell; vertical-align: middle; }
+.clsvip-paybar > div + div { padding-left: 15px; }
+.clsvip-paybar-left { font-size: 14px; }
+.clsvip-paybar-left strong { font-size: 16px; }
+.clsvip-paybar-left p + p { margin-top: 2px; }
+.clsvip-paybar-left .hl { margin: 0 0.2em; color: #fe6a00; }
+
+.clsvip-paybar-mobile { position: fixed; left: 0; right: 0; bottom: 0; z-index: 99; height: 42px; background-color: #fff;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: all .24s ease-in-out;
+            transition: all .24s ease-in-out;
+}
+.clsvip-paybar-mobile.visible { -webkit-transform: translateY(0); transform: translateY(0); }
+.clsvip-paybar-mobile .left, .clsvip-paybar-mobile .right { display: flex; align-items: center; height: 100%; }
+.clsvip-paybar-mobile .left { padding: 0 15px; justify-content: left; font-size: 12px; color: #fe6a00; background-color: rgba(237, 124, 48, 0.1); }
+.clsvip-paybar-mobile .left strong { font-size: 14px; }
+.clsvip-paybar-mobile .right { justify-content: center; font-size: 14px; color: #fff; background-color: #fe6a00; }
+
+@media (min-width: 992px) {
+    #paybar-section { padding-bottom: 32px; }
+    .clsvip-paybar { height: 120px; padding: 0 24px; }
+    .clsvip-paybar > div + div { padding-left: 22px; }
+    .clsvip-paybar-left { font-size: 22px; }
+    .clsvip-paybar-left strong { font-size: 24px; }
+    .clsvip-paybar-left p + p { margin-top: 5px; }
+    .clsvip-paybar-right .canstudy-tip { display: inline-block; margin-right: 16px; font-size: 16px; }
+    .clsvip-paybar-right .canstudy-tip > span { color: #fe6a00; }
+    .clsvip-paybar-right .vipprice { display: inline-block; margin-right: 16px; font-size: 20px; }
+    .clsvip-paybar-right .vipprice .hl { font-size: 22px; color: #fe6a00; }
+    .clsvip-paybar-right .paybar-btn { display: inline-block; padding: 12px 40px; font-size: 16px; border-radius: 24px; cursor: pointer; }
+}
+
+
+/* ======= 课程特点 ======= */
+#charac-section { padding-top: 12px; }
+.clsvip-charac { display: flex; justify-content: space-around; }
+.clsvip-charac-item { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.clsvip-charac-icon .i-icon { margin-bottom: 0.2em; font-size: 42px; font-weight: 400; border-radius: 50%; }
+.clsvip-charac-info .info-title { font-size: 16px; font-weight: 700; }
+
+@media (min-width: 992px) {
+    #charac-section { padding-top: 32px; padding-bottom: 0; background-color: #fff; }
+    .clsvip-charac { display: block; margin: 0 -40px; }
+    .clsvip-charac-item { display: table; padding: 0 40px; }
+    .clsvip-charac-item + .clsvip-charac-item { border-left: 1px solid #bfbfbf; }
+    .clsvip-charac-icon, .clsvip-charac-info { display: table-cell; vertical-align: middle; }
+    .clsvip-charac-icon .i-icon { margin-bottom: 0; font-size: 64px; }
+    .clsvip-charac-info { padding-left: 18px; }
+    .clsvip-charac-info .info-title { font-size: 20px; }
+    .clsvip-charac-info .info-des { margin-top: 5px; font-size: 16px; color: #666; }
+}
+
+
+/* ======= 课程简介 ======= */
+.clsvip-suggest .suggest-cell + .suggest-cell { margin-top: 16px; }
+.clsvip-suggest .suggest-head-icon { display: inline-block; margin-right: 8px; padding: 6px; border-radius: 50%; }
+.clsvip-suggest .suggest-head-icon .i-icon { font-size: 22px; }
+.clsvip-suggest .suggest-head-label { font-size: 16px; font-weight: 700; }
+.clsvip-suggest .suggest-main { margin-top: 8px; padding-left: 30px; font-size: 14px; color: #666;}
+
+@media (min-width: 992px) {
+    #suggest-section { padding-top: 27px; }
+    .clsvip-suggest-wrap { margin: -72px; }
+    .clsvip-suggest { display: table; table-layout: fixed; border-spacing: 72px; width: 100%; }
+    .clsvip-suggest .suggest-cell { position: relative; display: table-cell; margin: 0; padding: 20px 0; border-radius: 6px; }
+    .clsvip-suggest .suggest-head { position: absolute; top: 0; left: 50%; padding: 6px 15px; border-radius: 6px;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
+    .clsvip-suggest .suggest-head-icon { display: inline-block; margin-right: 12px; }
+    .clsvip-suggest .suggest-head-icon .i-icon { font-size: 26px; }
+    .clsvip-suggest .suggest-head-label { font-size: 20px;color: #fff; }
+    .clsvip-suggest .suggest-main { margin-top: 24px; padding: 0 14%; font-size: 16px; line-height: 1.8; }
+}
+
+
+/* ======= 学习路径 ======= */
+.study-path { background-color: #fff; border-radius: 6px; }
+.study-path + .study-path { margin-top: 12px; }
+.study-path-title { padding: 15px; }
+.study-path-title .decorate { width: 4px; height: 24px; border-radius: 2px;}
+.study-path-title .word { margin-left: 0.6em; font-size: 16px; font-weight: 700;}
+
+.study-path-course .course-wrapper { margin-bottom: 12px; padding: 0 15px; }
+.study-path-course .course { display: block; color: #333; }
+.study-path-course .course-img { overflow: hidden; position: relative; border-radius: 6px; transition: all .24s; }
+.study-path-course .course-img-view { position: absolute; right: 6px; bottom: 6px; min-width: 30px; padding: 0 6px; font-size: 12px; line-height: 18px; color: #fff; border-radius: 8px; background-color: rgba(0, 0, 0, .4); }
+.study-path-course .course-img-view .view-ico { display: inline-block; width: 16px; height: 16px; vertical-align: text-top; background: url("../image/course-view-ico.png") no-repeat center center/12px 12px; }
+.study-path-course .course:hover .course-img { box-shadow: 0 3px 5px rgba(0, 0, 0, .3); }
+.study-path-course .course-name { height: 1.5em; margin-top: 8px; font-size: 14px; font-weight: 600; }
+.study-path-course .course-desc { height: 3em; margin-top: 6px; font-size: 13px; color: #666; }
+
+@media (min-width: 992px) {
+    .study-path { box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
+    .study-path + .study-path { margin-top: 24px; }
+    .study-path-title { padding: 24px; }
+    .study-path-course .course-wrapper { margin-bottom: 24px; padding: 0 24px; }
+}
+
+
+/* ======= 会员权益 ======= */
+.vip-priv-grid .w3c-row { padding-bottom: 18px; }
+.vip-priv-grid .vip-priv-icon { display: inline-block; width: 12.8vw; max-width: 64px; height: 12.8vw; max-height: 64px; vertical-align: middle; }
+.vip-priv-grid .vip-priv-label { margin-top: 10px; font-size: 14px; }
+
+.vip-priv-detail { margin-top: 12px; padding: 0 10px; }
+.vip-priv-detail .toggle-switch { font-size: 12px; color: #666; }
+.vip-priv-detail .toggle-switch::after { content: ""; display: inline-block; margin-left: 0.4em; border-width: 6px 6px 0 6px; border-style: solid; border-color: #666 transparent transparent transparent; vertical-align: middle;
+    -webkit-transition: all .24s;
+            transition: all .24s;
+}
+.vip-priv-card { display: none; max-width: 520px; margin: 16px auto 0; padding: 16px; font-size: 14px; line-height: 1; background-color: #fff; border-radius: 6px; box-shadow: 0 0 4px #ddd; }
+.vip-priv-card .card-header { margin-bottom: 15px; font-size: 16px; font-weight: 700; color: #f3a450; }
+.vip-priv-card .card-content-item + .card-content-item { margin-top: 15px; }
+.vip-priv-card .card-content-item .left .vip-priv-icon { display: inline-block; width: 6.4vw; max-width: 32px; height: 6.4vw; max-height: 32px; margin-right: 6px; vertical-align: middle; }
+.vip-priv-card .card-content-item .left .vip-priv-label { vertical-align: middle; }
+.vip-priv-card .card-content-item .right { font-weight: 700; color: #f3a450; }
+.vip-priv-card .card-content-item .right .mark-tick::before { content: "√"; margin-right: 6px; font-family: "Helvetica Neue"; font-weight: 700; }
+.vip-priv-card .card-content-item .right .mark-tick, .vip-priv-card .card-content-item .right span { vertical-align: sub; }
+.vip-priv-card .card-footer { margin-top: 15px;font-size: 16px; font-weight: 700;  }
+.vip-priv-card .card-footer span { margin: 0 0.2em; color: #f3a450; }
+
+.vip-priv-detail .toggle-switch.open::after { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+.vip-priv-detail .toggle-switch.open + .vip-priv-card { display: block; }
+
+@media (min-width: 992px) {
+    .vip-priv-grid .w3c-row { padding-bottom: 32px; }
+    .vip-priv-grid .vip-priv-label { font-size: 18px; }
+
+    .vip-priv-detail { margin-top: 16px; padding: 0; }
+    .vip-priv-detail .toggle-switch { display: inline-block; font-size: 16px; cursor: pointer; }
+    .vip-priv-detail .toggle-switch::after { border-width: 7px 7px 0 7px; }
+    .vip-priv-card { margin-top: 24px; padding: 24px; font-size: 16px; }
+    .vip-priv-card .card-header { margin-bottom: 20px; font-size: 18px; }
+    .vip-priv-card .card-content-item .left .vip-priv-icon { margin-right: 10px; }
+    .vip-priv-card .card-footer { margin-top: 20px; font-size: 18px; }
+}
+
+
+/* ======= VIP代金券礼包 ======= */
+.clsvip-coupon-info .info-tip { padding-top: 12px; font-size: 14px;color: #666; }
+
+@media (min-width: 992px) {
+    .clsvip-coupon { display: table; }
+    .clsvip-coupon-img, .clsvip-coupon-info { display: table-cell; width: 50%; }
+    .clsvip-coupon-img { padding-right: 36px; }
+    .clsvip-coupon-info { padding-left: 36px; vertical-align: middle; }
+    .clsvip-coupon-info .info-des { font-size: 20px; }
+    .clsvip-coupon-info .info-tip { padding-top: 24px; font-size: 16px; }
+}
+
+
+/* ======= fixedbar ======= */
+#fixedbar-section { position: fixed; top: 0; left: 0; right: 0; z-index: 99; padding: 0 15px; background-color: #fff;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all .24s ease-in-out;
+            transition: all .24s ease-in-out;
+}
+#fixedbar-section.visible { box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+#fixedbar-section .clsvip-section-inner { display: table; table-layout: fixed; width: 100%; height: 80px; }
+#fixedbar-section .clsvip-section-inner > div { display: table-cell; width: 33.333333%; vertical-align: middle; }
+
+#fixedbar-section .clsvip-menu-submenu-title::after { border-top-color: #666; }
+#fixedbar-section .clsvip-menu-submenu-dropdown-inner { margin: 4px; border-radius: 4px; box-shadow: 0 1px 4px #aaa; }
+#fixedbar-section .clsvip-menu-submenu-dropdown-content { border-radius: 4px; }
+
+#fixedbar-section .clsvip-fixedbar-tabs { font-size: 18px; }
+#fixedbar-section .clsvip-fixedbar-tabs .tab { position: relative; display: inline-block; margin: 0 12px; padding: 7px 15px; cursor: pointer; }
+#fixedbar-section .clsvip-fixedbar-tabs .tab-active::after { content: ""; position: absolute; left: 25%; bottom: -15%; width: 50%; height: 3px; border-radius: 2px; background-color: #fe6a00; }
+
+#fixedbar-section .clsvip-paybar-right .vipprice { font-size: 18px; }
+
+
+/* ======= 待优化的 popup ======= */
+.clsvip-popup-mask, .clsvip-popup-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+.clsvip-popup-mask { z-index: 1100; background-color: rgba(0, 0, 0, .45); }
+.clsvip-popup-wrap { z-index: 1100; }
+
+.clsvip-popup { position: relative; top: 50px; margin: 0 15px; border-top: 2px solid #fe6a00; border-radius: 3px; background-color: #fff; }
+.clsvip-popup-close { position: absolute; top: 14px; right: 12px; z-index: 1; color: #999; cursor: pointer; transition: color .24s; }
+.clsvip-popup-close > .i-icon { font-size: 21px; vertical-align: top; }
+.clsvip-popup-close:hover { color: #444; }
+.clsvip-popup-header { padding: 14px 16px; border-bottom: 1px solid #e8eaec; color: #17233d; font-size: 16px; font-weight: 700; line-height: 21px; }
+.clsvip-popup-body { overflow-x: hidden; max-height: calc(100vh - 220px); padding: 16px; }
+.clsvip-popup-footer { padding: 12px 18px; border-top: 1px solid #e8eaec; text-align: right; }
+.clsvip-popup-footer .popup-btn { display: inline-block; height: 32px; padding: 0 15px; line-height: 30px; color: #515a6e; font-size: 14px; border: 1px solid #dcdee2; border-radius: 4px; background-color: #fff; cursor: pointer; -webkit-transition: all .24s; transition: all .24s; }
+.clsvip-popup-footer .popup-btn-lg { height: 40px; padding: 0 20px; font-size: 16px; line-height: 38px; }
+.clsvip-popup-footer .popup-btn:hover { color: #fe6a00; border-color: #fe6a00; }
+.clsvip-popup-footer .popup-btn-primary { color: #fff; background-color: #fe6a00; border-color: #fe6a00; }
+.clsvip-popup-footer .popup-btn-primary:hover { color: #fff; background-color: rgba(254, 106, 0, .65); border-color: rgba(254, 106, 0, .65); }
+.clsvip-popup-footer .popup-btn + .popup-btn { margin-left: 8px; }
+
+@media (min-width: 768px) {
+    .clsvip-popup { top: 100px; width: 768px; margin: 0 auto; }
+    .clsvip-popup-body { max-height: calc(100vh - 320px); }
+}
+
+
+/* ======= 购买 VIP ======= */
+#bvip-popup .clsvip-popup-body { padding: 0; background-color: #f9f9f9; }
+.bvip-cell-group-title { padding: 16px 16px 8px; color: #969799; font-size: 16px; line-height: 16px; }
+.bvip-cell { position: relative; display: block; padding: 10px 16px; color: #323233; font-size: 14px; line-height: 24px; background-color: #fff; }
+.bvip-cell + .bvip-cell::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; border-top: 1px solid #ebedf0; }
+.bvip-cell-clickable { cursor: pointer; }
+.bvip-cell-clickable:active { background-color: #f2f3f5; }
+.bvip-cell-title { float: left; }
+.bvip-cell-value { float: right; }
+
+.bvip-radio-wrapper { cursor: pointer; }
+.bvip-radio-wrapper-disabled { cursor: not-allowed; }
+.bvip-radio-wrapper:hover .bvip-radio-inner { border-color: #fe6a00; }
+.bvip-radio-wrapper-disabled:hover .bvip-radio-inner { border-color: #d9d9d9; }
+.bvip-radio { position: relative; display: inline-block; line-height: 1; vertical-align: text-top; }
+.bvip-radio-input { position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; cursor: pointer; }
+.bvip-radio-inner { display: inline-block; width: 20px; height: 20px; vertical-align: sub; background-color: #fff; border: 1px solid #d9d9d9; border-radius: 50%;
+    -webkit-transition: all .24s;
+            transition: all .24s;
+}
+.bvip-radio-inner::after { content: ""; position: absolute; top: 4px; left: 7px; width: 4px; height: 8px; border-width: 0 2px 2px 0; border-style: solid; border-color: #fff;
+    -webkit-transform: rotate(45deg) scale(0);
+        -ms-transform: rotate(45deg) scale(0);
+            transform: rotate(45deg) scale(0);
+    -webkit-transition: all .24s ease-in-out;
+            transition: all .24s ease-in-out;
+}
+.bvip-radio-input:checked + .bvip-radio-inner { border-color: #fe6a00; background-color: #fe6a00; }
+.bvip-radio-input:checked + .bvip-radio-inner::after { -webkit-transform: rotate(45deg) scale(1); -ms-transform: rotate(45deg) scale(1); transform: rotate(45deg) scale(1); }
+
+
+/* 按钮类型的 radio */
+.bvip-radio-button-wrapper { position: relative; display: inline-block; }
+.bvip-radio-button-input { position: absolute; top: 0; left: 0; z-index: 1; opacity: 0; cursor: pointer; }
+.bvip-radio-button { display: inline-block; text-align: center; vertical-align: top; color: #515a6e; border: 1px solid #d9d9d9; border-radius: 4px; background-color: #fff; cursor: pointer;
+    -webkit-transition: all 0.24s ease;
+            transition: all 0.24s ease;
+}
+.bvip-radio-button-wrapper:hover .bvip-radio-button { border-color: #fe6a00; }
+.bvip-radio-button-input:checked + .bvip-radio-button { color: #fe6a00; border-color: #fe6a00; background-color: rgba(237, 124, 48, 0.1); }
+
+
+/* VIP类型 */
+.bvip-viptype { padding-top: 14px; padding-bottom: 14px; }
+.bvip-viptype-group { margin: -5px -8px; }
+.bvip-viptype-group-item { position: relative; padding: 5px 8px; }
+.bvip-viptype-group-item .bvip-radio-button-wrapper { width: 100%; }
+.bvip-viptype-group-item .bvip-radio-button { width: 100%; height: 48px; padding: 0 8px; }
+.bvip-viptype-group-item .bvip-radio-button::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+.bvip-viptype-group-item .bvip-radio-button-inner { display: inline-block; vertical-align: middle; }
+.bvip-viptype-group-item-recommend { position: absolute; top: 0; left: 0; z-index: 1; padding: 4px 6px; font-size: 12px; line-height: 1; color: #fff; border-top-right-radius: 8px; border-bottom-left-radius: 8px; background-color: #fe6a00; }
+
+.bvip-viptype-detail { margin-top: 14px; padding: 6px 10px; font-size: 14px; line-height: 1.5; color: #666; border-radius: 4px; background-color: #f5f5f5; }
+.bvip-viptype-detail-label { font-weight: 700; }
+.bvip-viptype-detail-label > .i-icon { margin-right: 4px; font-size: 14px; vertical-align: baseline; }
+.bvip-sumprice { margin-right: 0.4em; color: #fe6a00; }
+.bvip-origprice { margin-left: 6px; font-size: 12px; }
+
+/* 购买时长 */
+.bvip-quantity .bvip-radio-button-wrapper + .bvip-radio-button-wrapper { margin-left: 8px; }
+.bvip-quantity .bvip-radio-button { width: 68px; height: 24px; line-height: 22px; }
+
+/* 支付方式 */
+.bvip-paytype-img { margin-right: 8px; vertical-align: top; }
+.bvip-paytype-ali .addon { display: inline-block; margin-left: 8px; color: #fe6a00;
+    -webkit-transform-origin: 0% 70%;
+            transform-origin: 0% 70%;
+    -webkit-transform: scale(0.7); 
+            transform: scale(0.7);
+}
+.bvip-paytype-w3c .addon { margin-left: 8px; }
+
+/* 温馨提示 */
+.bvip-tips .bvip-cell-group-title { font-size: 14px; }
+.bvip-tips-content { padding: 0 16px 10px; font-size: 12px; color: #666; }
+.bvip-tips-content ul { list-style-type: disc; padding-left: 16px; }
+
+/* 支付成功 */
+.clsvip-popup-body .bvip-result { padding: 16px; font-size: 14px; background-color: #fff; }
+
+/* 充值协议 */
+.bvip-terms { display: block; margin-top: 6px; font-size: 12px; }
+
+/* 页面布局 */
+
+.study-path-course {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ======= animation ======= */
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes easeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+@keyframes easeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}

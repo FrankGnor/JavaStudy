@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>JAVA 测试_蜗牛JAVA</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="Python 测试,Python" />
+    <meta name="description" content="Python 测试，Python，w3cschool题库" />
+    <link href="imgs/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css_topicTest/iconfont.css">
+    <link href="css_topicTest/w3.css" rel="stylesheet" />
+    <link href="css_topicTest/project.css" rel="stylesheet" type="text/css" />
+    <link href="css_topicTest/exam.css" rel="stylesheet" type="text/css" />
+    <link href="css_topicTest/sweet-alert.min.css" rel="stylesheet" type="text/css" />
+    <link href="css_topicTest/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="play-body">
+    <div id="full-height-container">
+        <div class="head">
+            <div class="left">
+                <img src="imgs/logo.png" alt="" class="img1">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" style="color:#ffffff">首页</a></li>
+                    <li><a href="topicTest.html?topic=-1" style="color:#ffffff">错题集</a></li>
+                    <li><a href="tutorial/tutorial_index.html" style="color:#ffffff">JAVA教程</a></li>
+                </ul>
+            </div>
+            <div  id="right" >
+            <span class="login" id="login">
+                <a href="" id = "1">登录</a>
+            </span>
+                |
+                <span class="register" id="reg">
+                <a href="" id = "2">注册</a>
+            </span>
+
+            </div>
+
+        </div>
+
+        <script>
+            var apppath = '/exam/test';
+            var domain = '//www.w3cschool.cn';
+
+        </script>
+        <!--header end-->
+        <div class="play-banner" id="exam-id" data-pid="6436" data-stem="exam">
+            <div class="index-wrapper">
+                <div class="play-banner-content">
+                    <div class="bread-nav bread-nav-banner">
+
+                    </div>
+                    <h1 class="section-title" data-cid="">Python 测试</h1>
+
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div class="play-content">
+                <div class="play-area">
+                    <div class="play-progress">
+                        <div class="progress-info">
+                            <div class="progress-bar" style="width:15%"></div>
+                        </div>
+                        <span class="progress-nums">1/1</span>
+                        <div class="progress-time"><span id="time">00:00:00</span></div>
+                    </div>
+                    <!--做题区域-->
+                    <div id="exam-area">
+
+
+                    </div>
+                    <div class="exam-operation">
+                        <div class="exam-op-r pull-right">
+                            <a href="javascript:;" class="btn-submit exam-btn-submit" onclick="submitExam();">交卷</a>
+                            <a href="javascript:;" class="btn-submit exam-btn-jump">下一题</a>
+                        </div>
+                    </div>
+                    <!--答题卡-->
+                    <div class="exam-answercard exam-border-t">
+                        <div class="exam-card-title">
+                            <h4>答题卡</h4>
+                            <span class="exam-card-sheet ed">已答</span>
+                            <span class="exam-card-sheet un">未答</span>
+                        </div>
+                        <div class="exam-card-info">
+                            <ul class="exam-card-list" id="exam-card-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 上一题、下一题 -->
+                    <div class="play-nav-box">
+                        <a data-qid="" href="javascript:;" class="nav play-nav-prev" title="上一题">
+                            <i class="play-icon play-icon-prev"></i>
+                        </a>
+                        <a data-qid="" href="javascript:;" class="nav play-nav-next" title="下一题">
+                            <i class="play-icon play-icon-check"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-box"></div>
+        <!--引入底部-->
+        <!-- footer start  -->
+        <footer>
+            <p>Copyright © 2022 上海蜗牛JAVA培训中心</p>
+        </footer>
+
+
+
+        <!-- 侧边工具栏：判断完页面是否植入美洽后再显示，防止闪烁 -->
+        <div id="toolbar" style="display: none;">
+
+            <div class="tool wechat">
+                <div class="tool-inner">
+                    <div class="tool-icon"></div>
+                    <div>关注有礼</div>
+                </div>
+                <div class="tool-popover">
+                    <div class="tool-popover-inner">
+                        <div class="img"><img src="imgs/wwz.jpg" alt="微信公众号"
+                                width="140" height="140"></div>
+                        <p>扫码关注 领资料包</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool backtop" data-visibility="50">
+                <div class="tool-inner">
+                    <div class="tool-icon"></div>
+                    <div>返回顶部</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/commonfooter.js" type="text/javascript"></script>
+    <!-- <script src="//www.w3cschool.cn/statics/js/editormd.js" type="text/javascript"></script> -->
+    <script src="js/ajaxdo.core.js" type="text/javascript"></script>
+    <script src="js/sweet-alert.min.js" type="text/javascript"></script>
+    <script src="js/jq_ui_sortable.js" type="text/javascript"></script>
+
+
+
+    <!-- AJAX数据交互 -->
+    <script src="js/axios.js"></script>
+    <script src="js/codeTest_AJAX.js"></script>
+    <script type="text/javascript">
+        var timer = 0;
+        var thisq = 0;
+        var qtotal = 0;
+        var myType = new Object();
+        var myAnswer = new Object();
+        var editor = {};
+
+        function editorInit(id) {
+            if (typeof id == 'undefined' || id == '') {
+                return false;
+            }
+            //console.log(id);
+            editor[id] = editormd(id, {
+                mode: "markdown",
+                width: "100%",
+                height: "200px",
+                autoHeight: true,
+                syncScrolling: "single",
+                saveHTMLToTextarea: true,    // 保存 HTML 到 Textarea
+                watch: true,                // 关闭实时预览:true,
+                path: "/plugins/markdown/lib/",
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "/plugins/markdown/php/controller.php?action=uploadimage&amp;immediate=1",
+                toolbarIcons: function () {
+                    return [
+                        "undo", "redo", "|",
+                        "bold", "del", "italic", "quote", "uppercase", "lowercase", "|",
+                        "image", "|",
+                        "list-ul", "list-ol", "hr", "|",
+                        "watch", "|",
+                        "code", "code-block"
+                    ];
+                },
+                toolbarIconsClass: {
+                    wikiLink: "fa-anchor",  // 指定一个FontAawsome的图标类
+                    addFile: "fa-file",
+                    addRef: "fa-bookmark",
+                    htmlPaste: "fa-file-code-o",
+                },
+                onchange: function () {
+                    var id = this.id;
+                    var qid = id.replace('editorarea', '');
+                    var mdcontent = this.getMarkdown();
+                    myAnswer[qid] = mdcontent;
+                    if ($.trim(mdcontent) != '') { // 如果内容不为空, 答题卡做标记
+                        $(".exam-card-list li[data-qid='" + qid + "'] .exam-card-sheet").removeClass("un");
+                        $(".exam-card-list li[data-qid='" + qid + "'] .exam-card-sheet").addClass("ed");
+                    }
+                },
+                onload: function (msg) {
+                    //console.log(msg);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            if (typeof (Storage) === "undefined") {
+                toastr.info("抱歉！您的浏览器不支持 Web Storage ...请确认您已经登录再进行答题,以免答题结果丢失", '', { "positionClass": "toast-top-center" });
+            }
+            if (localStorage.getItem("pid") != null) {
+                setAnswer();
+            }
+            $("[id^='elmaaa']").on('change', function () {
+                var qid = $(this).attr('id');
+                qid = qid.replace('elmaaa', '');
+                var mdcontent = $(this).val();
+                myAnswer[qid] = mdcontent;
+                //console.log('dsfdsfdfsdfs');
+                if ($.trim(mdcontent) != '') { // 如果内容不为空, 答题卡做标记
+                    $(".exam-card-list li[data-qid='" + qid + "'] .exam-card-sheet").removeClass("un");
+                    $(".exam-card-list li[data-qid='" + qid + "'] .exam-card-sheet").addClass("ed");
+                }
+            });
+            //textarea支持tab缩进
+            $("textarea").on(
+                'keydown',
+                function (e) {
+                    if (e.keyCode == 9) {
+                        e.preventDefault();
+                        var indent = '    ';
+                        var start = this.selectionStart;
+                        var end = this.selectionEnd;
+                        var selected = window.getSelection().toString();
+                        selected = indent + selected.replace(/\n/g, '\n' + indent);
+                        this.value = this.value.substring(0, start) + selected
+                            + this.value.substring(end);
+                        this.setSelectionRange(start + indent.length, start
+                            + selected.length);
+                    }
+                })
+            setTimer();
+            //loadset();
+        });
+        //显示第一题
+        function loadset() {
+            $("#exam-area .play-item:first").show();
+            thisq = $("#exam-area .play-item:first").attr("data-qid");
+            //设置进度条
+            qtotal = $("#exam-area .play-item").length;
+            setprogress(1);
+            $(".ui-sortable").sortable();
+            $(".ui-sortable").disableSelection();
+            $("#exam-area .play-item").each(function () {
+                myType[$(this).attr("data-qid")] = $(this).attr("data-qtype");
+            });
+        }
+
+        //选中样式
+        $(document).on("click", ".exam-option", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var qtype = $(this).parent().parent().parent().attr("data-qtype");
+            if (qtype == 1) {
+                $(this).parent().find(".exam-option .icons").removeClass("icons-checked");
+                $(this).find("input[type='radio']").attr("checked", "checked");
+                $(this).find(".icons").addClass("icons-checked");
+            } else if (qtype == 2) {
+                var chb = $(this).find("input[type='checkbox']");
+                chb.attr("checked", !chb.attr("checked"));
+                if (chb.is(":checked")) {
+                    chb.prev().addClass("icons-checked");
+                } else {
+                    chb.prev().removeClass("icons-checked");
+                }
+            } else if (qtype == 3) {
+                $(".exam-option .icons").removeClass("icons-checked");
+                $(this).find("input[type='radio']").attr("checked", "checked");
+                $(this).find(".icons").addClass("icons-checked");
+            } else if (qtype == 6) {
+                var chb = $(this).find("span");
+                if (chb.hasClass("fill-box-as-checked")) {
+                    return false;
+                }
+                var str = chb.text();
+                var aid = chb.attr("data-aid");
+                $("#exam-area .play-item[data-qid='" + thisq + "'] .choose-fill-box").each(function () {
+                    if ($(this).text().length == 0) {
+                        $(this).text(str);
+                        $(this).attr("data-aid", aid);
+                        chb.addClass("fill-box-as-checked");
+                        return false;
+                    }
+                });
+            }
+            setTimeout(function () { checkAnswer(1); }, 300);
+        });
+        //选择填空选中样式
+        // $(document).on("click",".fill-box-as",function(){
+        //     $(this).parent().click();
+        // });
+        $(document).on("click", ".choose-fill-box", function () {
+            var aid = $(this).attr("data-aid");
+            $(this).text("");
+            $(this).attr("data-aid", 0);
+            $("#exam-area .play-item[data-qid='" + thisq + "'] .answer-area span[data-aid='" + aid + "']").removeClass("fill-box-as-checked");
+        });
+        $(document).on("mouseup", ".exam-drag-sort", function () {checkAnswer(1);});
+
+        //点答题卡跳转题目
+        $(document).on("click", ".exam-card-list li", function () {
+            var qid = $(this).attr("data-qid");
+            var qtype = $(this).attr("data-qtype");
+            $("#exam-area .play-item").hide();
+            $("#exam-area .play-item[data-qid='" + qid + "']").show();
+            thisq = qid;
+            //设置进度条
+            var progress = $(this).index() * 1 + 1;
+            setprogress(progress);
+            // if(typeof editor['editorarea'+thisq] != 'undefined'){
+            // }else if(qtype == 10 || qtype == 11 || qtype == 12){
+            //     editorInit('editorarea'+thisq)
+            // }
+            //最后一题,隐藏下一题按钮
+            if ($("#exam-area .play-item[data-qid='" + qid + "']").next().length == 0) {
+                $(".exam-btn-jump").hide();
+            } else {
+                $(".exam-btn-jump").show();
+            }});
+
+        //继续下一题
+        function checkAnswer(auto) {
+            var next = 0;
+            var info = $("#exam-area .play-item[data-qid='" + thisq + "']");
+            if (info.length == 0) {
+                return;
+            }
+            var type = info.attr("data-qtype");
+            if (type == 1) {
+                var thisAnswer = info.find(".answer-area .icons-checked").next().val();
+                if (typeof (thisAnswer) != "undefined") {
+                    next = 1;
+                    myAnswer[thisq] = thisAnswer;
+                } else {
+                    myAnswer[thisq] = 0;
+                }
+            } else if (type == 2) {
+                var answers = [];
+                info.find(".answer-area input[type='checkbox']").each(function () {
+                    if ($(this).is(':checked')) {
+                        answers.push($(this).val());
+                    }
+                });
+                answers.sort(sortNumber);
+                myAnswer[thisq] = answers.join(",");
+                if (answers.length != 0) next = 1;
+            } else if (type == 3) {
+                var thisAnswer = info.find(".answer-area .icons-checked").next().val();
+                if (typeof (thisAnswer) != "undefined") {
+                    next = 1;
+                    myAnswer[thisq] = thisAnswer;
+                } else {
+                    myAnswer[thisq] = 0;
+                }
+            } else if (type == 4) {
+                myAnswer[thisq] = 1;
+            } else if (type == 5) {
+                var answers = [];
+                info.find(".content-intro input[type='text']").each(function () {
+                    answers.push($(this).val());
+                });
+                myAnswer[thisq] = answers.join(",");
+                if (answers.length != 0) next = 1;
+            } else if (type == 6) {
+                var answers = [];
+                info.find(".content-intro .choose-fill-box").each(function () {
+                    if ($(this).attr("data-aid") != 0) {
+                        answers.push($(this).attr("data-aid"));
+                    }
+                });
+                //answers.sort(sortNumber);
+                myAnswer[thisq] = answers.join(",");
+                if (answers.length != 0) next = 1;
+            } else if (type == 7) {
+                var answers = [];
+                info.find(".ui-sortable-handle").each(function () {
+                    if (typeof ($(this).attr("data-aid")) != 'undefined') {
+                        answers.push($(this).attr("data-aid"));
+                    }
+                });
+                myAnswer[thisq] = answers.join(",");
+                next = 1;
+            } else {
+                //console.log('ffff3333333');
+                //return;
+            }
+            //标记答题卡
+            if (next) {
+                $(".exam-card-list li[data-qid='" + thisq + "'] .exam-card-sheet").removeClass("un");
+                $(".exam-card-list li[data-qid='" + thisq + "'] .exam-card-sheet").addClass("ed");
+            }
+            if (auto == 1 && (type == 2 || type == 6 || type == 7)) {
+                //console.log('fffffffffff');
+                return;
+            } else {
+                jumpnext(info);
+            }
+        }
+        function jumpnext(obj) {
+            var nextInfo = obj.next();
+
+            if (nextInfo.length == 0) {
+                //swal("", "");
+                //toastr.info("已经是最后一题了!",'',{"positionClass": "toast-top-center"});
+                return;
+            }
+            if (nextInfo.next().length == 0) {
+                $(".exam-btn-jump").hide();
+            } else {
+                $(".exam-btn-jump").show();
+            }
+            thisq = nextInfo.attr("data-qid");
+            qtype = nextInfo.attr("data-qtype");
+            // if(typeof editor['editorarea'+thisq] != 'undefined'){
+            // }else if(qtype == 10 || qtype == 11 || qtype == 12){
+            //     editorInit('editorarea'+thisq)
+            // }
+            obj.hide();
+            nextInfo.show();
+            //设置进度条
+            var progress = nextInfo.index() * 1 + 1;
+            setprogress(progress);
+        }
+        function setTimer() {
+            timer++;
+            var hh = parseInt(timer / 3600);
+            var ii = parseInt((timer / 60) % 60);
+            var ss = parseInt(timer % 60);
+            if (hh > 99) return;
+            if (hh < 10) hh = "0" + hh;
+            if (ii < 10) ii = "0" + ii;
+            if (ss < 10) ss = "0" + ss;
+            $("#time").html(hh + ":" + ii + ":" + ss);
+            t = setTimeout("setTimer()", 1000);
+        }
+        //下一题
+        $(".btn-submit,.play-nav-box .play-nav-next").on("click", function () {
+            checkAnswer(0);
+        });
+        //上一题
+        $(".play-nav-box .play-nav-prev").on("click", function () {
+            var thisInfo = $("#exam-area .play-item[data-qid='" + thisq + "']");
+            var prevInfo = thisInfo.prev();
+            if (prevInfo.length == 0) {
+                return;
+            }
+            thisq = prevInfo.attr("data-qid");
+            thisInfo.hide();
+            prevInfo.show();
+        });
+        //排序
+        function sortNumber(a, b) {
+            return a - b
+        }
+        function submitExam() {
+            var totalquestion = $(".exam-card-list .exam-card-sheet").length;
+            var edquestion = $(".exam-card-list .ed").length;
+            var swaltext = '';
+            if (totalquestion - edquestion > 0) {
+                swaltext = '您还有' + (totalquestion - edquestion) + '题未解答!';
+            }
+            swal({
+                title: "确认提交试卷?",
+                type: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                cancelButtonText: "取消"
+            },
+                function (flag) {
+                    if (flag) {
+                        var id = $("#exam-id").attr("data-pid");
+                        postAnswer(id, timer, myAnswer);
+                    } else {
+                        return;
+                    }
+                });
+        }
+        function setAnswer() {
+            var id = localStorage.getItem("pid");
+            var time = localStorage.getItem("timer");
+            var answer = JSON.parse(localStorage.getItem("myAnswer"));
+            postAnswer(id, time, answer);
+        }
+        function setprogress(progress) {
+            var schedule = Math.round(progress / qtotal * 10000) / 100.00;
+            $(".progress-nums").html(progress + "/" + qtotal);
+            $(".progress-bar").css("width", schedule + "%");
+        }
+        function postAnswer(id,time,answer){
+            var stem = $("#exam-id").attr("data-stem");
+            let username = localStorage.getItem('username');
+            let topic = localStorage.getItem('topic');
+            $.ajaxdo({
+                url:"/demo/insertCodeAnswer",
+                type:"post",
+                dataType: 'json',
+                data:{"pid":id,"type":myType,"exam":answer,"username":username,"timer":time,"topic":topic},
+                sync:false,
+                success:function(data){
+                    alert("等待老师在系统中批改题目");
+                    window.location.href="index.html";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

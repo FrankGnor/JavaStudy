@@ -1,0 +1,149 @@
+
+
+/* ======= 编程工具 ======= */
+
+a { color: inherit; }
+
+.sig-header { background-color: #efefef; }
+#header-l .logo { float: left; }
+
+/* 页面布局 */
+.tool-layer { margin: 24px 0; }
+.tool-layer::after { content: ''; display: table; clear: both; }
+.tool-layer:last-child { padding-bottom: 50px; }
+.tool-layer-sider { float: right; width: 320px; }
+.tool-layer-sider .tool-sider-cell { padding-left: 12px; padding-right: 12px; margin-top: 24px; }
+.tool-layer-sider .tool-sider-cell:first-child { margin-top: 0; }
+.tool-layer-sider .tool-sider-cell-main { padding-top: 16px; padding-bottom: 16px; background-color: #fff; border-radius: 6px; }
+.tool-layer-content { margin-right: 340px; }
+.tool-container { width: 1140px; margin: 0 auto; }
+@media (min-width: 1300px) {
+    .tool-container { width: 1240px; }
+}
+
+/* Tabs */
+.tool-tabs-nav { margin-bottom: 16px; border-bottom: 1px solid #f0f0f0; }
+.tool-tabs-nav .tool-tabs-tab { position: relative; bottom: -1px; display: inline-block; padding-bottom: 12px; margin-right: 32px; font-size: 14px; cursor: pointer; -webkit-transition: color .24s; transition: color .24s; }
+.tool-tabs-nav .tool-tabs-tab:hover { color: #fe6a00; }
+.tool-tabs-nav .tool-tabs-tab:last-child { margin-right: 0; }
+
+/* 富文本 */
+.rich-text { font-size: 14px; line-height: 1.74; letter-spacing: 0.05em; color: #262626; }
+.rich-text > * { box-sizing: border-box; }
+.rich-text b,
+.rich-text strong { font-weight: bolder; }
+.rich-text h1 { padding: 7px 0; font-size: 28px; line-height: 36px; }
+.rich-text h2 { padding: 7px 0; font-size: 24px; line-height: 32px; }
+.rich-text h3 { padding: 7px 0; font-size: 20px; line-height: 28px; }
+.rich-text h4 { padding: 7px 0; font-size: 16px; line-height: 24px; }
+.rich-text h5 { padding: 7px 0; font-size: 12px; line-height: 20px; }
+.rich-text ol,
+.rich-text ul { margin: 0 0 0 3px; list-style-type: disc; }
+.rich-text li { margin-left: 23px; }
+.rich-text blockquote { padding-left: 1em; margin: 5px 0; color: #8c8c8c; border-left: 3px solid #eee; }
+.rich-text table { table-layout: fixed; border-collapse: collapse; border-spacing: 0; word-wrap: break-word; word-break: normal; width: 100%; margin: 0; border: 1px solid #d9d9d9; }
+.rich-text table td { min-width: 90px; height: 30px; padding: 4px 8px; word-wrap: break-word; word-break: normal; border: 1px solid #d9d9d9; vertical-align: top; }
+.rich-text img { max-width: 100%; }
+
+/* ======= 编程工具 - 首页 ======= */
+/* 导航栏 */
+.tool-nav { padding: 20px 0 15px; border-bottom: 1px solid #f0f0f0; }
+.tool-nav-all { height: 32px; padding: 0 14px; line-height: 30px; color: #333; border: 1px solid transparent; border-radius: 5px; }
+.tool-nav-all.active { color: #fe6a00; border-color: #fe6a00; background-color: rgba(254, 106, 0, .1); }
+.tool-nav-menu { margin-left: 80px; }
+.tool-nav-menu-item { height: 32px; margin: 0 10px; line-height: 32px; }
+.tool-nav-menu-item > a { padding: 4px 10px; color: #333; }
+.tool-nav-menu-item > a:hover { color: #fe6a00; }
+.tool-nav-menu-item > a.active { color: #fe6a00; }
+
+/* 筛选 */
+.tool-filter a { display: inline-block; padding: 0 14px; line-height: 28px; color: #333; border-radius: 14px; }
+.tool-filter a + a { margin-left: 8px; }
+.tool-filter a:hover { color: #fe6a00; }
+.tool-filter a.active { color: #fff; background-color: #fe6a00; }
+
+/* 侧边栏 */
+.tool-sider-download h3 { margin-bottom: 16px; font-size: 16px; color: #fe6a00; }
+.tool-sider-download .tutorial-list { margin: -2px }
+.tool-sider-download .tutorial-list > a { width: 96px; padding: 0 8px; margin: 2px; line-height: 28px; color: #333; font-size: 12px; background-color: #f7f7f7;
+    -webkit-transition: background-color .24s;
+            transition: background-color .24s;
+}
+.tool-sider-download .tutorial-list > a:hover { background-color: #dfdfdf; }
+.tool-sider-download .click-download { display: block; margin-top: 16px; line-height: 28px; color: #fff; background-color: #fe6a00; border-radius: 14px; }
+
+.tool-sider-course .course-head h3 { font-size: 16px; }
+.tool-sider-course .course-head .more { line-height: 24px; color: #333; }
+.tool-sider-course .course-head .more:hover { color: #fe6a00; }
+.tool-sider-course .course-item { display: block; margin-top: 16px; }
+.tool-sider-course .course-item .cover { display: inline-block; width: 100px; height: 56px; overflow: hidden; border-radius: 4px; }
+.tool-sider-course .course-item .info { padding-top: 8px; margin-left: 112px; color: #333; }
+.tool-sider-course .course-item .info-title { font-size: 14px; font-weight: normal; -webkit-transition: color .24s; transition: color .24s; }
+.tool-sider-course .course-item .info-count { font-size: 12px; color: #999; }
+.tool-sider-course .course-item:hover .info-title { color: #fe6a00; }
+
+/* 工具列表 */
+.tool-list { padding: 24px 16px; background-color: #fff; border-radius: 6px; }
+.tool-list-item + .tool-list-item { padding-top: 24px; margin-top: 24px; border-top: 1px solid #f0f0f0; }
+.tool-list-item > a { position: relative; display: block; min-height: 64px; color: #333; }
+.tool-list-item .info { margin-left: 80px; margin-right: 136px; }
+.tool-list-item .info-name { font-size: 16px; -webkit-transition: color .24s; transition: color .24s; }
+.tool-list-item > a:hover .info-name { color: #fe6a00; }
+.tool-list-item .info-intro { margin-top: 8px; font-size: 14px; color: #666; }
+.tool-list-item .info-meta { margin-top: 8px; font-size: 12px; }
+.tool-list-item .info-meta .tag { padding: 2px 12px; line-height: 20px; color: #fe6a00; background-color: rgba(254, 106, 0, .1); border-radius: 10px; }
+.tool-list-item .info-meta .count { margin-left: 24px; color: #999; }
+.tool-list-item .info-meta .count .i-icon { margin-right: 0.4em; vertical-align: baseline; }
+.tool-list-item .download { position: absolute; top: 50%; right: 0; width: 120px; line-height: 36px; text-align: center; border: 1px solid #eff1f3; border-radius: 4px;
+    -webkit-transition: all .24s;
+            transition: all .24s;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.tool-list-item .download .i-icon { margin-right: 8px; font-size: 24px; vertical-align: sub; }
+.tool-list-item .download:hover { color: #fe6a00; border-color: #fe6a00; }
+
+
+/* ======= 编程工具 - 详情页 ======= */
+.tool-breadcrumb { padding: 20px 0; font-size: 14px; color: #8c8c8c; }
+.tool-breadcrumb a:hover { color: #fe6a00; }
+.tool-breadcrumb-separator { margin: 0 8px; }
+
+/* 顶部横幅 */
+.tool-topbar { padding: 16px 24px; background-color: #fff; border-radius: 6px; }
+
+.tool-topbar-addon { margin-bottom: 12px; }
+.tool-topbar-addon h2 { font-size: 16px; font-weight: 400; }
+.tool-topbar-addon .count { padding: 0 12px; margin-left: 8px; font-size: 14px; line-height: 22px; border: 1px solid #e7e8e9; border-radius: 12px; }
+.tool-topbar-addon .count > .hl { color: #fe6a00; }
+
+.tool-topbar-main { height: 64px; }
+.tool-topbar-meta { height: 100%; font-size: 0; }
+.tool-topbar-meta::before { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.tool-topbar-meta .meta-cell { display: inline-block; min-width: 200px; margin-left: 16px; font-size: 13px; vertical-align: middle; }
+.tool-topbar-meta .meta-cell p + p { margin-top: 8px; }
+.tool-topbar-operation { height: 100%; }
+.tool-topbar-operation:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.tool-topbar-operation .operation-btn { display: -webkit-inline-flex; display: inline-flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; padding: 4px 12px; font-size: 14px; color: #333; vertical-align: middle; cursor: pointer; -webkit-transition: all .24s; transition: all .24s; }
+.tool-topbar-operation .operation-btn .i-icon { margin-right: 4px; font-size: 18px; vertical-align: middle; }
+.tool-topbar-operation .operation-btn-tip { font-size: 12px; }
+.tool-topbar-operation .operation-btn:hover { color: #fe6a00; }
+.tool-topbar-operation .operation-btn + .operation-btn { margin-left: 12px; }
+.tool-topbar-operation .operation-btn-download { color: #fff; background-color: #fe6a00; border-radius: 4px; }
+.tool-topbar-operation .operation-btn-download:hover { color: #fff; background-color: rgba(254, 106, 0, .65); }
+
+/* 工具介绍 Tabs */
+.tool-intro-tabs { padding: 24px 16px; background-color: #fff; border-radius: 6px; }
+.tool-intro-tabs .tool-tabs-tab { font-size: 16px; }
+.tool-intro-tabs .tool-tabs-tab.active { color: #fe6a00; border-bottom: 2px solid #fe6a00; }
+
+/* 相关工具推荐 */
+.tool-recommend-tabs { margin-top: 24px; }
+.tool-recommend-tabs .tool-tabs-tab.active { color: #5d5d5d; border-bottom: 2px solid #d3d3d3; }
+.tool-recommend-link { width: 50%; margin-top: 12px; font-size: 12px; }
+.tool-recommend-link:nth-child(1) { margin-top: 0; }
+.tool-recommend-link:nth-child(2) { margin-top: 0; }
+.tool-recommend-link:nth-child(2n-1) { padding-right: 15px; }
+.tool-recommend-link:nth-child(2n) { padding-left: 15px; }
+.tool-recommend-link span { margin-right: 0.4em; }

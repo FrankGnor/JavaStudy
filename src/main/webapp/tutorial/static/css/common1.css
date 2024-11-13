@@ -1,0 +1,205 @@
+
+
+/* 在某些情况下，IE10+ 不支持 <meta name="viewport"> */
+@-ms-viewport { width: device-width; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;   /* 改变 IOS 可点击元素默认的点击高亮色为完全透明 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  font-size: 14px;
+  line-height: 1.5715;
+  color: #262626;
+  background-color: #fff;
+}
+
+hr {
+  box-sizing: content-box;    /* 设置 Firefox 正确的盒子大小 */
+  height: 0;
+  overflow: visible;          /* 显示 Edge 和 IE 的溢出内容 */
+}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; font-weight: 500; }
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;          /* 移除 IE10 激活链接时的灰色背景 */
+  cursor: pointer;
+  transition: color 0.3s;
+  -webkit-text-decoration-skip: objects;  /* 移除 iOS8+ 和 Safari8+ 链接下划线的空白 */
+}
+
+/* 移除 IE10- 链接内图像的边框 */
+img, video { vertical-align: middle; border-style: none; }
+
+p { margin-top: 0; margin-bottom: 0; }
+b, strong { font-weight: bolder; }
+ol, ul { margin: 0; padding: 0; list-style: none; }
+
+textarea { resize: none; }
+input, select, button, textarea {
+  font: inherit;
+  line-height: 1.5715;
+  color: inherit;
+  border: none;
+  background-color: #fff;
+  -webkit-appearance: none;   /* 清除 iOS 手机下的内阴影 */
+}
+
+/* webkit 浏览器中的元素在 foucs 下都会有 outline: webkit-focus-ring-color auto 5px; 样式 */
+:focus, a, input, button, textarea { outline: none; }
+
+/* 清除 Firefox 自动填充 input 出现的屎黄色背景 */
+input { filter: none; }
+
+/* 清除 webkit 自动填充 input 出现的背景色 —— 障眼法 */
+input:-webkit-autofill,
+input:focus:-webkit-autofill { -webkit-box-shadow: 0 0 0 50px #fff inset; box-shadow: 0 0 0 50px #fff inset; }
+
+/* 清除 IE10+ input 文本输入控件的清除按钮（叉叉） */
+input::-ms-clear,
+input::-ms-reveal { display: none; }
+
+/* HTML5 标签在 IE8 及其以下默认为 inline 元素 */
+nav,
+main,
+aside,
+header,
+footer,
+dialog,
+figure,
+hgroup,
+article,
+section,
+figcaption { display: block; }
+/* 浮动 */
+.fl { float: left; }
+.fr { float: right; }
+.clearfix { zoom: 1; }  /* IE */
+.clearfix::before,
+.clearfix::after { content: ''; display: table; }
+.clearfix::after { clear: both; }
+
+/* 元素内容水平对齐 */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify {
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: inter-ideograph;  /* IE */
+  font-size: 0;                   /* 见 .text-justify::after 内的 Tip */
+}
+.text-justify::after {
+  /*  Tip：
+      Safari 16- 不支持 text-align-last
+      由于伪类的 inline-block 会使 text-justify 元素产生一行空白间距，所以设置了 font-size 为 0 来消除此间距，可单独设置子元素的 font-size 复原字体
+  */
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* 文本省略 */
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.text-ellipsis--l2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.text-ellipsis--l3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* 禁止选择 */
+/* Tip：IE6-9使用标签属性 onselectstart="return false;" */
+.disable-select { user-select: none; }
+
+/* Iconfont 图标库：i-icon */
+@font-face {
+  font-family: 'i-icon';
+  src: url('../font/iconfont.eot'), url('../font/iconfont.ttf') format('truetype');
+}
+.i-icon {
+  display: inline-block;
+  font-display: auto;
+  font-family: 'i-icon';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  line-height: 1;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+}
+.i-icon-alipay::before { content: ''; }
+.i-icon-ant-credit-pay::before { content: ''; }
+.i-icon-book::before { content: ''; }
+.i-icon-bulb::before { content: ''; }
+.i-icon-calculator::before { content: ''; }
+.i-icon-check::before { content: ''; }
+.i-icon-checked::before { content: ''; }
+.i-icon-clear::before { content: ''; }
+.i-icon-clear-o::before { content: ''; }
+.i-icon-close::before { content: ''; }
+.i-icon-compress::before { content: ''; }
+.i-icon-comment::before { content: ''; }
+.i-icon-edit::before { content: ''; }
+.i-icon-exclamation-circle::before { content: ''; }
+.i-icon-expand::before { content: ''; }
+.i-icon-flag::before { content: ''; }
+.i-icon-file-checked::before { content: ''; }
+.i-icon-help::before { content: ''; }
+.i-icon-link::before { content: ''; }
+.i-icon-loading::before { content: ''; }
+.i-icon-lock-o::before { content: ''; }
+.i-icon-logout::before { content: ''; }
+.i-icon-menu::before { content: ''; }
+.i-icon-mobile::before { content: ''; }
+.i-icon-more::before { content: ''; }
+.i-icon-notice-o::before { content: ''; }
+.i-icon-pause::before { content: ''; }
+.i-icon-pc::before { content: ''; }
+.i-icon-play::before { content: ''; }
+.i-icon-play-circle::before { content: ''; }
+.i-icon-refresh::before { content: ''; }
+.i-icon-replay::before { content: ''; }
+.i-icon-resume::before { content: ''; }
+.i-icon-setting::before { content: ''; }
+.i-icon-setting-o::before { content: ''; }
+.i-icon-stop::before { content: ''; }
+.i-icon-unlock-o::before { content: ''; }
+.i-icon-user::before { content: ''; }
+.i-icon-video::before { content: ''; }
+.i-icon-video-code::before { content: ''; }
+.i-icon-wallet::before { content: ''; }
+.i-icon-wxpay::before { content: ''; }
+.i-icon-up::before { content: ''; }
+.i-icon-down::before { content: ''; }
+.i-icon-left::before { content: ''; }
+.i-icon-right::before { content: ''; }
+.i-icon-github-circle::before { content: ''; }
+.i-icon-qq-circle::before { content: ''; }
+.i-icon-wechat-circle::before { content: ''; }
+.i-icon-weibo-circle::before { content: ''; }

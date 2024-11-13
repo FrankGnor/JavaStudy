@@ -1,0 +1,82 @@
+
+[v-cloak] { display: none; }
+.curriculum, .app-download-wrap, .tabbar-wrap { max-width: 1240px; margin-left: auto; margin-right: auto; }
+
+.cover { background: #092B99 url(../image/banner.png) no-repeat 50% 0/cover; box-shadow: none; height: 25vw; color: #fff; min-width: 1200px; }
+.cover:before { display: inline-block; content: "center"; vertical-align: middle; width: 0; height: 10%; overflow: hidden; }
+.cover-wrap { display: -webkit-flex; -webkit-flex-direction: column; -webkit-align-items: center; display: flex; flex-direction: column; align-self: center; vertical-align: middle; font-size: 1.26vw; color: #fff; }
+.cover-wrap h1 {font-size: 4.54vw; }
+.cover-wrap .cover-text-des {  font-size: 1.25vw; text-shadow: 5px 5px 5px rgba(46, 42, 81, 0.2); margin-top: 1.28vw; }
+.cover-wrap .cover-text-secondary { margin-top: 1.8vw; font-size: 1.04vw;  }
+.cover-wrap .break-through { display: block; border-radius: 35px; background-color: rgb(24, 43, 155); margin-top: 1.6vw; border: none; padding: 1vw 2.29vw; text-shadow: none; text-align: center; transition: background-color 0.14s linear; cursor: pointer; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4); font-size: 1.25vw; }
+.cover-wrap .begin-break-through { display: flex; align-items: center; display: -webkit-flex; -webkit-align-items: center; letter-spacing: 2px;  padding: 1vw 3.29vw; }
+.cover-wrap .begin-break-through i { margin-right: 10px; }
+.cover-wrap .break-through:hover { background-color: #1f37c7; color: #fff; }
+.cover-banner { position: absolute; top: 0; bottom: 0; left: 165px; right: 168px; }
+.emp-typeface { color: #FF912B; }
+
+.tabbar { box-shadow: 0px 1px 6px 0px rgba(195, 195, 195, 0.4); background-color: #fff; }
+.tabbar .tabbar-wrap { display: -webkit-flex; -webkit-justify-content: space-between; -webkit-align-items: center; display: flex; justify-content: space-between; align-items: center; }
+.tabbar .tabbar-wrap .tabbar-item { display: -webkit-flex; -webkit-flex-direction: column; -webkit-align-items: center; display: flex; flex-direction: column; align-items: center; cursor: pointer; border-radius: 4px; width: 170px; margin: 9px 0 7px 0; }
+.tabbar .tabbar-wrap .tabbar-item:hover { box-shadow: 0px 2px 6px 0px rgba(195, 195, 195, 0.4); }
+.tabbar .tabbar-wrap .tabbar-item .tabbar-item-text { padding: 6px 21px 9px 21px; font-size: 16px; white-space: nowrap; }
+.tabbar .tabbar-wrap .tabbar-item .tabbar-item-icons { margin-top: 15px; width: 30px; height: 30px; color: #597EF7; }
+.tabbar-item-active { background-color: rgba(89, 126, 247, 100); box-shadow: none; color: #fff; }
+.fixed { position: fixed; top: 80px; left: 0; right: 0; z-index: 99; }
+.fixed-covering { margin-top: 181px!important; }
+
+.course-wrap { margin-top: 60px; padding: 0; width: auto; }
+.course-wrap .course-subject { padding: 0 30px; margin-bottom: 40px; }
+.course-wrap .course-subject-head { display: -webkit-flex; -webkit-flex-direction: column; -webkit-align-items: flex-start; display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 16px; }
+.course-wrap .course-subject-head .course-subject-title { position: relative; display: -webkit-flex; display: flex; }
+.course-wrap .course-subject-head .course-subject-title:before, .course-wrap .course-subject-head .course-subject-title:after { position: absolute; top: 10px; left: -40px; content: ''; width: 22px; height: 22px; background-color: #597EF7; }
+.course-wrap .course-subject-head .course-subject-title:before { transform: rotate(45deg); }
+.course-wrap .course-subject-head .course-subject-title:after { top: 5px; left: -50px; background-color: #fff; height: 35px; }
+.course-wrap .course-subject-head .course-subject-title h2 { margin: 0; padding: 0; font-size: 26px; margin: auto; font-weight: normal; margin-bottom: 11px; }
+.course-wrap .course-subject-head .course-subject-describe { color: rgb(121, 121, 121); font-size: 16px; }
+.course-wrap .course-subject-head .course-subject-describe span { font-weight: 600; }
+.course-wrap .course-subject-head .course-subject-describe span:last-child { padding-left: 15px; }
+.course-wrap .course-subjuect-wrap { display: -webkit-flex; -webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap; margin-left: -18px; margin-right: -18px; }
+.course-wrap .course-subjuect-wrap .course-subject-wrapper { box-sizing: border-box; width: 25%; padding: 0 20px; }
+.course-wrap .course-subjuect-wrap .course-subject-item { box-shadow: 0px 2px 6px 0px rgba(147, 147, 147, 40); border-radius: 8px; margin-bottom: 30px; cursor: pointer; }
+.course-wrap .course-subjuect-wrap .course-subject-item img { width: 100%; border-radius: 8px 8px 0px 0px; }
+.subject-item-info { padding: 13px 14px 20px 14px; }
+.subject-item-info h3 { font-weight: normal; font-size: 16px; color: rgb(41, 41, 41); }
+.subject-item-info .item-info-progress { display: -webkit-flex; -webkit-flex-direction: column; -webkit-justify-content: space-between; display: flex; flex-direction: column; justify-content: space-between; margin-top: 10px; }
+.subject-item-info .item-info-progress .info-progress-text { display: -webkit-flex; -webkit-justify-content: space-between; display: flex; justify-content: space-between; color: rgb(121, 121, 121); }
+.subject-item-info .item-info-progress .info-progress-text span em { color: #597EF7; font-style: normal; }
+.subject-item-info .item-info-progress .info-progress-bar { display: -webkit-flex; -webkit-justify-content: space-between; -webkit-align-items: baseline; display: flex; justify-content: space-between; align-items: baseline; margin-top: 13px; }
+.subject-item-info .item-info-progress .info-progress-bar .progress-bar-text { font-size: 12px; color: rgb(121, 121, 121); }
+.subject-item-info .item-info-progress .info-progress-bar .progressBar-wrap { width: 60%; height: 10px; background-color: rgba(132, 132, 132, 0.2); border-radius: 70px; }
+.subject-item-info .item-info-progress .info-progress-bar .progressBar-wrap .progressBar-fill { position: relative; height: 100%; background-color: #52C41A; border-radius: 70px; min-width: 10%; }
+.subject-item-info .item-info-progress .info-progress-bar .progressBar-wrap .progressBar-fill:before { position: absolute; top: 20%; left: 6px; right: 6px; border-radius: inherit; background: rgba(255, 255, 255, 0.2); height: 31%; content: ''; }
+
+.course-praise { min-width: 1200px; height: 8vw; margin-top: 100px; background: url(../image/advert.png) no-repeat 50% 0/cover; }
+
+.app-download-wrap { margin-top: 66px; }
+.app-download-wrap h2 { font-size: 40px; text-align: center; }
+.app-download-wrap .app-download-content { margin-top: 30px; }
+.app-download-wrap .app-download-content .app-download-title { display: -webkit-flex; -webkit-align-items: baseline; -webkit-justify-content: center; font-size: 27px; text-align: center; justify-content: center; }
+.app-download-wrap .app-download-content .app-download-title i { color: #597EF7; }
+.app-download-wrap .app-download-content .app-donwload-main { display: -webkit-flex; -webkit-justify-content: space-between; display: flex; justify-content: space-between; margin: 40px 0 80px 0; }
+.app-download-wrap .app-download-content .app-donwload-main .download-example { flex: 1; text-align: center; }
+.app-download-wrap .app-download-content .app-donwload-main .download-example img { width: 80%; margin-top: 20px!important; }
+.app-download-wrap .app-download-content .app-donwload-main .app-download-guide { flex: 1; font-size: 20px; text-align: left; margin-top: 20px; }
+.app-donwload-main .app-download-guide .download-intro { word-break: break-word; }
+.app-donwload-main .app-download-guide .download-box { display: -webkit-flex; -webkit-align-self: center; display: flex; align-self: center; margin-top: 43px; }
+.app-donwload-main .app-download-guide .download-box .download-qrcode-wrap { display: -webkit-flex; -webkit-flex-direction: column; display: flex; flex-direction: column; font-size: 16px; }
+.app-donwload-main .app-download-guide .download-box .download-qrcode-wrap .download-qrcode{ border-radius: 8px; box-shadow: 0px 2px 6px 0px rgba(208, 208, 208, 40); border: 1px solid rgb(255, 255, 255); padding: 15px 20px; width: 80%; margin-bottom: 24px; }
+.app-donwload-main .app-download-guide .download-box .download-qrcode-wrap span { padding-left: 40px; }
+.app-donwload-main .app-download-guide .download-box .app-download-box { display: -webkit-flex; -webkit-flex-direction: column; -webkit-align-items: center; -webkit-justify-content: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.app-donwload-main .app-download-guide .download-box .app-download-box .download-btn { box-sizing: border-box; width: 100%; border-radius: 20px; background-color: rgb(89, 126, 247); text-align: center; color: #fff; font-size: 18px; margin-bottom: 39px; padding: 10px 44px; }
+
+@media (max-width: 1200px) {
+    .cover { height: 300px; }
+    .cover-wrap h1 {font-size: 55px; }
+    .cover-wrap .cover-text-des, .cover-wrap .break-through { font-size: 15px; margin-top: 15px; }
+    .cover-wrap .break-through { margin-top: 19px; padding: 12px 28px; }
+    .cover-wrap .begin-break-through { padding: 10px 32px; }
+    .cover-wrap .cover-text-secondary { font-size: 13px; margin-top: 22px; }
+    .curriculum, .app-download-wrap, .tabbar-wrap { width: 1183px; }
+    .course-praise { height: 108px; }
+}

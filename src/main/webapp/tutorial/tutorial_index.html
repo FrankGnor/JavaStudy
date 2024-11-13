@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Java 教程_蜗牛</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="Java 教程">
+  <meta name="description" content="Java 教程_来自Java 教程，上海_蜗牛。">
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="static/css/iconfont.css">
+  <link rel="stylesheet" href="static/css/w3.css">
+  <link rel="stylesheet" href="static/css/style-kn-project-view.css" type="text/css">
+  <link rel="stylesheet" href="static/css/style-theme.css" type="text/css">
+  <link href="static/css/photoswipe.css" rel="stylesheet" type="text/css">
+  <link href="static/css/default-skin.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="static/css/feedback.css">
+  <script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="static/js/feedback.js" type="text/javascript"></script>
+  <script src="static/js/backmore.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="static/css/project_1.css">
+  <link rel="stylesheet" href="static/css/project.css">
+  <link href="static/css/default.css" rel="stylesheet" type="text/css">
+  <script src="static/js/highlight.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" href="../imgs/favicon.ico">
+  <script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="static/js/jquery.slimscroll.1.38.min.js" type="text/javascript"></script>
+  <script src="static/js/project.leftbox.js" type="text/javascript"></script>
+  <script src="static/js/photoswipe.min.js" type="text/javascript"></script>
+  <script src="static/js/photoswipe-ui-default.min.js" type="text/javascript"></script>
+
+
+  <!-- AJAX数据交互 -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="AJAX/tutorial_AJAX.js" type="text/javascript"></script>
+  <style>
+    a {
+      color: inherit;
+    }
+
+    .recommend-article,
+    .recommend-project {
+      -webkit-flex: 1;
+      flex: 1;
+    }
+
+    .recommend-option:last-child {
+      margin-right: 0;
+    }
+
+    .recommend-option h2 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .recommend-option ul {
+      box-shadow: 0 0 24px rgb(199 207 225 / 41%);
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    .recommend-option li {
+      /*display: inline-block;*/
+      /* padding: 5px 0; */
+      /*margin-right: 15px;*/
+      height: 26px;
+      line-height: 26px;
+      margin-bottom: 8px;
+    }
+
+    .recommend-option li:last-child {
+      margin-bottom: 0;
+    }
+
+    .recommend-option li a {
+      display: inline-block;
+      font-size: 14px;
+      width: 100%;
+      word-wrap: normal;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .recommend-option li a:hover {
+      color: #fe6a00;
+    }
+
+    .recommend-option li a::before {
+      content: "";
+      background: #fe6a00;
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      margin-right: 8px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+
+    .stealth-scroll {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      width: auto;
+      height: auto;
+      background: #fff;
+    }
+
+    .stealth-scroll-bar {
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      display: flex;
+      align-items: center;
+      /* display: block; */
+      list-style: outside none none;
+      /*overflow-x: auto;*/
+      white-space: nowrap;
+      padding: 10px 0 10px 5px;
+      margin: 0;
+      /***滚动条样式***/
+      scrollbar-face-color: rgba(0, 0, 0, 0);
+      scrollbar-highlight-color: rgba(0, 0, 0, 0);
+      scrollbar-3dlight-color: rgba(0, 0, 0, 0.2);
+      scrollbar-darkshadow-color: rgba(0, 0, 0, 0);
+      scrollbar-Shadow-color: rgba(0, 0, 0, 0);
+      scrollbar-arrow-color: rgba(0, 0, 0, 0);
+      scrollbar-track-color: rgba(0, 0, 0, 0);
+
+      font-size: 16px;
+    }
+
+    .stealth-scroll-bar li {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      margin-right: 5px;
+    }
+
+    .stealth-scroll-bar span {
+      font-size: 18px;
+      padding: 0 3px;
+    }
+
+    .stealth-scroll-bar li a {
+      margin: 0 5px 0 5px;
+      color: #333;
+    }
+
+    .stealth-scroll-bar li.kr_active a {
+      color: #fe6a00;
+    }
+
+    .header-logo .mobile-logo {
+      display: inline-block;
+      /* width: 4.8rem;
+height: 0.9rem; */
+      width: 8rem;
+      height: 1.5rem;
+      background: url(static/image/logonew2.png) no-repeat center center/contain;
+    }
+
+    @media (min-width: 1024px) {
+      .stealth-scroll {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+
+      #header,
+      .right-item,
+      .side-widget-flexible,
+      .feedback-btn,
+      .hot-icon {
+        display: none !important;
+      }
+
+      #m-splitter {
+        overflow: hidden;
+        padding-top: 37px;
+      }
+
+      #full-height-container .main-container #pcover {
+        width: 95%;
+      }
+
+      #full-height-container .service-card {
+        flex-direction: column;
+      }
+
+      #full-height-container .service-card .card-list {
+        margin-bottom: 20px;
+      }
+
+      .left-container {
+        bottom: 0;
+        box-shadow: rgb(0 0 0 / 60%) 0px 2px 1px;
+        width: 0;
+      }
+
+      .left-drager {
+        display: none;
+      }
+
+      #pro-mian {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .set-btn-group {
+        display: flex;
+      }
+
+      .content-intro .example {
+        width: auto;
+      }
+
+      .portlet-title {
+        position: initial;
+        height: 0;
+      }
+
+      .group-wrap {
+        position: fixed;
+        top: 37px;
+        left: 0;
+        right: 0;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        width: 100% !important;
+        background: #fff;
+        z-index: 11;
+      }
+
+      .content-links {
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .recommend-footer {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .recommend-option {
+        margin-bottom: 20px;
+      }
+
+      .splitter-sidebar {
+        padding-top: 20px;
+      }
+    }
+
+    @media (max-width: 968px) {
+      #m-splitter {
+        min-width: 375px;
+        width: 100%;
+      }
+
+      #full-height-container .main-container #pcover {
+        width: 100%;
+      }
+
+      #full-height-container .logrow {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 680px) {
+
+      .kn-btn-group,
+      .share-btn,
+      .coverinfo-desc .lately-read {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 教程内容页 未登录 -->
+  <div id="full-height-container" class="project-container color-theme-white">
+    <!--控制本地颜色主题样式-->
+    <script type="text/javascript">
+      var tempColor = $.cookie("color");
+      if (tempColor != undefined) {
+        $("#full-height-container").addClass(tempColor);
+      }
+    </script>
+    <!-- 教程内容页头部 -->
+    <!--header start-->
+    <div id="header" class="header-with-search pro_header">
+      <div id="header_item">
+        <!-- 顶部广告 -->
+        <div id="topbanner" style="display: none;">
+          <div class="close-topbox close_top_ad">
+            <i class="i-icon i-icon-close i-icon-close-thin"></i>
+          </div>
+        </div>
+        <!-- 右侧悬浮标广告 -->
+        <div id="rfbanner" style="display: none;"></div>
+
+        <div id="header_index">
+          <div id="header-l">
+            <a href="../index.html" title="w3cschool" class="logo"><img src="../imgs/logo.png" alt="w3cschool"></a>
+            <ul class="header-menu" style="margin-left: 45px;">
+              <li><a href="../index.html" title="首页" style="color: #ffffff;">首页</a></li>
+              <li><a href="../topicTest.html?topic=-1" title="错题集" style="color: #ffffff;">错题集</a></li>
+              <li><a href="tutorial_index.html?id=1" title="编程教程" class="header-menu-vip " style="color: #ffffff;">编程教程<i
+                    class="hot-icon">
+                    JAVA</i></a></li>
+            </ul>
+          </div>
+
+
+
+          <div class="fr searchbox">
+            <form action="/demo/SearchServlet" target="_self">
+              <input type="text" name="keyword" class="box" id="searched_content" placeholder="输入关键字搜索...">
+              <button type="submit" class="button"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var apppath = '/java/l3hpjf21.html';
+      var domain = '//www.w3cschool.cn';
+    </script>
+    <!--header end-->
+
+    <div id="m-splitter">
+      <div class="m-splitter-left left-container">
+        <div class="fixed-sidebar mscroller" style="width:100%;">
+          <div class="splitter-sidebar">
+            <div class="sidebar-space-info">
+              <a href="index4.html" title="Java 教程">
+                <div class="sidebar-pro-wrapper">
+                  <div class="sidebar-pro-container">
+                    <div class="sidebar-pro-img">
+                      <span><img class="pimg-cover" alt="Java 教程" src="static/picture/cover_java.png"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro-name-container">
+                  <div class="sidebar-pro-name">
+                    <span>Java 教程</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div style="clear:both"></div>
+            <div class="sidebar-content">
+              <div class="sidebar-tree">
+                <div class="sidebar-tree-content">
+                  <div class="dd" id="nestable_handbook" data-tid="15486" data-id="handbook">
+                    <ol class="dd-list" id="catalogue">
+
+                      <li class="dd-item" data-id="l3hpjf21">
+                        <div class="dd-content folder-open  active ">
+                          <i class="folder icon-folder-open"></i>
+                          <a title="Java 教程">Java 教程</a>
+                        </div>
+                        <ol class="dd-list">
+
+                          <li class="dd-item" data-id="java-tutorial">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?id=1" title="Java 入门教程">Java 入门教程</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-intro">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?id=2" title="Java 简介">Java 简介</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-environment-setup">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?id=3" title="Java 开发环境配置">Java 开发环境配置</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-basic-syntax">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?id=4" title="Java 基础语法">Java 基础语法</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-object-classes">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=5" title="Java 对象和类">Java 对象和类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-basic-datatypes">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=6" title="Java 基本数据类型">Java 基本数据类型</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-variable-types">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=7" title="Java 变量类型">Java 变量类型</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-modifier-types">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=8" title="Java 修饰符">Java 修饰符</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-operators">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=9" title="Java 运算符">Java 运算符</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-loop">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=10"
+                                title="Java 循环结构 - for, while 及 do…while">Java 循环结构 - for, while
+                                及 do…while</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-if-else-switch">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=11" title="Java 分支结构 - if…else/switch">Java 分支结构
+                                -
+                                if…else/switch</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-number">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=12" title="Java Number类">Java Number类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-character">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=13" title="Java Character类">Java Character类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-string">
+                            <div class="dd-content">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=14" title="Java String类">Java String类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-stringbuffer">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=15"
+                                title="Java StringBuffer 和 StringBuilder 类">Java
+                                StringBuffer 和 StringBuilder 类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-array">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=16" title="Java 数组">Java 数组</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-date-time">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=17" title="Java 日期时间">Java 日期时间</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-regular-expressions">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=18" title="Java 正则表达式">Java 正则表达式</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-methods">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=19" title="Java 方法">Java 方法</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-files-io">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=20" title="Java 流(Stream)、文件(File)和IO">Java
+                                流(Stream)、文件(File)和IO</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-scanner-class">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=21" title="Java  Scanner 类">Java Scanner 类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-exceptions">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=22" title="Java 异常处理">Java 异常处理</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="dd-item" data-id="utew7f21">
+                        <div class="dd-content folder-open ">
+                          <i class="folder icon-folder-open"></i>
+                          <a title="Java 面向对象">Java 面向对象</a>
+                        </div>
+                        <ol class="dd-list">
+
+                          <li class="dd-item" data-id="java-inheritance">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=23" title="Java 继承">Java 继承</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-override-overload">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=24" title="Java 重写(Override)与重载(Overload)">Java
+                                重写(Override)与重载(Overload)</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-polymorphism">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=25" title="Java 多态">Java 多态</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-abstraction">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=26" title="Java 抽象类">Java 抽象类</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-encapsulation">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=27" title="Java 封装">Java 封装</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-interfaces">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=28" title="Java 接口">Java 接口</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                          <li class="dd-item" data-id="java-package">
+                            <div class="dd-content  ">
+                              <i class="ic-folder-open2"></i>
+                              <a href="tutorial_index.html?tutorial_id=29" title="Java 包(package)">Java 包(package)</a>
+                            </div>
+                            <ol class="dd-list">
+
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+
+
+                    </ol>
+                  </div>
+                </div>
+                <!--  sidebar-tree-content end  -->
+                <div class="search-box hide1">
+                  <div id="knsearch" class="tab-pane">
+                    <div class="knsearch-input">
+                      <input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+                      <button class="knsearchbtn">搜索</button>
+                      <!--<button class="kncleanbtn">清空</button>-->
+                    </div>
+                    <div class="searchres">
+                    </div>
+                    <div class="sidebar-tree-dict"></div>
+                  </div>
+                </div>
+                <div class="stars-box hide1">
+                  <div id="kncollect" class="tab-pane">
+                    <ul class="dd-list">
+                      <li class="nostar"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+        </div>
+      </div>
+      <div class="splitter-handle left-drager">
+        <div class="left-dragger-c splitter-handle-highlight"></div>
+      </div>
+      <div id="pro-mian" class="main-container font0">
+        <div class="project-body">
+          <div class="portlet-title pro-title">
+            <div class="group-wrap">
+              <div class="set-btn-group font-settings pull-left">
+                <a href="#" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+                <a href="#" class="toggle-dropdown-size" title="字体大小设置"><i class="icon-font"></i></a>
+                <a href="#" class="toggle-dropdown-background" title="夜间模式"><i class="w3c-icon w3c-icon-night"
+                    style="display: contents;"></i></a>
+                <!-- 视觉主题字体大小设置 -->
+                <div class="set-dropdown-menu set-size docblur" style="display:none;">
+                  <div class="dropdown-caret">
+                    <span class="caret-outer"></span>
+                    <span class="caret-inner"></span>
+                  </div>
+                  <div class="buttons font-opt">
+                    <button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+                    <button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+                  </div>
+                </div>
+                <!-- 视觉主题背景颜色设置 -->
+                <div class="set-dropdown-menu set-background docblur">
+                  <div class="dropdown-caret">
+                    <span class="caret-outer"></span>
+                    <span class="caret-inner"></span>
+                  </div>
+                  <div class="buttons bg-color">
+                    <button class="button theme background-day" color="color-theme-white" title="默认模式">默认</button>
+                    <button class="button theme" color="color-theme-sepia" title="护眼模式">护眼</button>
+                    <button class="button theme background-night" color="color-theme-night" title="夜间模式">夜间</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div id="pro-mian-header">
+            <!--横版广告放置-->
+            <div class="abox-content abox-novip-item" closebtn="show" actflag="abox_workview1_top"> <a target="_blank"
+                href="doubleEleven.html"><img src="static/picture/1668581914663739.png" alt="终生vip"
+                  style="    width: 100% !important;    height: auto !important;"></a></div>
+            <div class="content-top">
+              <h1 id="content-top">Java 教程</h1>
+            </div>
+            <div class="kn-infomation" title="创建于:2022-11-20 16:58:48">2022-11-20 18:00 更新</div>
+            <!--                 <div class="kn-infomation">
+由&nbsp;<span>haiguiking</span>&nbsp;创建， 最后一次修改&nbsp;<span>2015-10-16</span>
+</div>  -->
+          </div>
+          <div class="content-bg" id="content-bg">
+            <div class="content-intro view-box "></div>
+            <div style="clear:both"></div>
+          </div>
+          <!--控制本地字体主题样式-->
+          <script type="text/javascript">
+            var tempFontsize = $.cookie("fontsize");
+            if (tempFontsize != undefined) {
+              $("#pro-mian").addClass(tempFontsize);
+            }
+          </script>
+
+          <!--练习、出题、写笔记-->
+          <div class="project-operation">
+
+            <div>
+              <a href="../index.html" class="op-btn note-btn" ><i
+                  class="icon-pencil"></i>我要补充</a>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="navigation-box">
+          <a href="tutorial_index.html?id=1" title="下一篇：Java 入门教程" class="navigation navigation-next"><i
+              class="icon-chevron-right"></i></a>
+        </div>
+      </div>
+      <div id="pro-footer">
+        <div class="s-footer">
+          <div class="s-footer-bottom">
+            <p>Copyright&copy;2022&nbsp;<a href="../index.html" target="_blank" title="Snail_JAVA"> | snail_Java</a> |
+              🐌🐌🐌<span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 侧边小部件 -->
+  <div class="side-widget">
+
+    <div class="side-widget-container">
+      <div class="side-widget-item backtop" data-visibility="50">
+        <div class="widget-icon"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feedback-Box" style="display: none;">
+    <div class="feedback-Box-content" style="width: 800px;">
+      <div class="feedback-Box-top">
+        <span class="feedback-Box-title">意见反馈</span>
+        <span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+      </div>
+      <ul>
+        <li class="feedback-box">
+          <div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+          <textarea name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。"
+            style="width: 700px;height:200px;overflow:auto;"></textarea>
+          <p>联系方式：</p>
+          <input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress"
+            style="height: 30px;width: 200px;">
+        </li>
+      </ul>
+      <button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+    </div>
+  </div>
+
+  <div id="note-start" style="display: none"></div>
+
+  <div id="detail" style="display:none;">
+    <div id="note-Dialog" class="note-Dialog">
+      <div class="note-Box-content">
+        <div class="ntitlebox">
+          <input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle">
+        </div>
+        <div id="editorarea">
+          <textarea name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder=""
+            style="width: 700px;height:200px;overflow:auto;"></textarea>
+        </div>
+        <p></p>
+        <a class="closenote" href="login.html" target="_blank">查看完整版笔记</a>
+        <button class="notesubmit" id="notesubmit">保存</button>
+        <button class="notebtn pull-right closenote" style="margin:20px 0">关闭</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="widget-body" data-type="project"></div>
+  <div class="dialog-area"></div>
+
+  <div id="tryframebox" class="tryframebox" style="display: none;">
+
+    <div class="tryframebox-inner">
+      <iframe id="tryframe" class="tryframebox" name="tryframe" width="100%" height="100%"
+        style="border: none;"></iframe>
+      <span class="closeifream" style="font-size: 30px;"><i class="i-icon i-icon-close-circle" width="20px"
+          height="20px"></i> </span>
+    </div>
+
+  </div>
+
+  <!-- 图片放大根元素，必须有类 pswp -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- 背景 -->
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <!-- 幻灯片容器，在DOM中保留其中3个以节省内存，不要修改 -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .closeifream {
+      position: absolute;
+      top: 0;
+      right: -48px;
+      z-index: 9999999;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+
+  <script src="static/js/shCore.min.js" type="text/javascript"></script>
+  <script src="static/js/commonfooter.js" type="text/javascript"></script>
+  <script src="static/js/project.view.js" type="text/javascript"></script>
+  <script src="static/js/ajaxdo.core.js" type="text/javascript"></script>
+  <!-- <script src="//www.w3cschool.cn/statics/js/paypraise.js" type="text/javascript"></script> -->
+  <script src="static/js/base64.js" type="text/javascript"></script>
+
+  <script>
+    $(function () {
+      var sideWidgetFlexible = $('.side-widget-flexible');
+      var sideWidgetFlexibleInner = sideWidgetFlexible.find('.side-widget-flexible-inner');
+      var sideWidgetFlexibleTrigger = sideWidgetFlexible.find('.side-widget-flexible-triger');
+      sideWidgetFlexibleTrigger.on('click', function () {
+        var _this = $(this);
+        if (_this.hasClass('up')) {
+          sideWidgetFlexible.css({
+            height: sideWidgetFlexibleInner.height(),
+            overflow: 'visible'
+          });
+          _this.removeClass('up').addClass('down');
+        } else {
+          sideWidgetFlexible.css({
+            height: 60,
+            overflow: 'hidden'
+          });
+          _this.removeClass('down').addClass('up');
+        }
+      })
+    })
+  </script>
+  <script>
+
+    var kn = {
+      pid: '70',
+      kmid: '15486',
+      kename: 'l3hpjf21',
+      pename: 'java',
+      ismenu: '1',
+      ktitle: 'Java 教程',
+      ktype: 'floder',
+      original: '1',
+      uid: '0',
+      fid: '0',
+      flags: 'ue'
+
+    };
+    var book = {
+      pename: 'java',
+      bookname: 'Java 教程'
+
+    };
+
+    var Gvar = {
+      activityflag: '',
+      remoteLangs: ['php', 'ruby', 'go', 'python', 'python3', 'c', 'cpp', 'perl', 'perl6', 'java', 'lua'],
+      supportLangs: ['php', 'ruby', 'go', 'python', 'python3', 'c', 'cpp', 'perl', 'perl6', 'java', 'lua', 'html', 'js', 'javascript'],
+    };
+
+  </script>
+  <script src="static/js/workview.js" type="text/javascript"></script>
+  <script>
+    $(function () {
+
+      $('.expand-collapse-trigger').on('click', function () {
+        if (document.body.clientWidth <= 968 && $('.left-container').width() < 100) {
+          $('.left-container').hide();
+          $('.left-drager').hide();
+          $('#pro-mian').css('marginLeft', '0');
+          $('.portlet-title').css({ 'width': '100%', 'left': '0', 'right': '0' });
+        }
+      });
+      if (document.body.clientWidth <= 968 && $('.left-container').width() > 100) {
+        $('.expand-collapse-trigger').click();
+      }
+      if (document.body.clientWidth <= 968 && $('.left-container').width() > 0) {
+        $('.left-container').hide();
+        $('.left-drager').hide();
+        $('#pro-mian').css('marginLeft', '0');
+        $('.portlet-title').css({ 'width': '100%', 'left': '0', 'right': '0' });
+      }
+
+      var contentMain = document.getElementById('pro-mian');
+      // 监听网页的copy(复制)事件
+      contentMain.addEventListener('copy', function (event) {
+        // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+        var clipboardData = event.clipboardData || window.clipboardData;
+        var tipWxLogin = sessionStorage.getItem('tipWxLogin');
+        // 如果未复制或者未剪切，则return出去
+        if (!clipboardData) return;
+        if (tipWxLogin == 1) return;
+        // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+        var text = window.getSelection().toString();
+        var qrparams = {
+          title: "复制成功!",
+          tip: "<h4>登录后体验更佳!</h4>",
+          refer: window.location.pathname,
+          channel: 'lesson_copy_wx_scanner',
+        };
+        wechatqr(qrparams);
+        sessionStorage.setItem('tipWxLogin', 1);
+      });
+
+      if (kn.kename != '') {
+        var lastviewUrl = '//' + window.location.host + '/' + kn.pename + '/' + kn.kename + '.html';
+        localStorage.setItem("lastview_" + kn.pename, lastviewUrl);
+      }
+
+      $("#pro-mian").on("click", ".dshowtry", function (e) {
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        var pre = $(this).prev();
+        var mself = this;
+
+        var code;
+        var elcode = pre.find("code");
+        var lang = pre.attr("lang");
+        if (!lang) {
+          lang = elcode.attr("lang");
+        }
+        var num = elcode.attr("num");
+        if (num) {
+          let tarcode = $("code[num='" + num + "']").not("[class*='showdemo']");
+          code = tarcode.parents("pre").data('code');
+          lang = tarcode.attr("lang");
+        } else {
+          // 过滤掉代码块中高亮的span
+          code = elcode.text();
+          // value = value.replace(/<span class="hljs[^>]+>(.*?)<\/span>/ig, '$1');
+        }
+        if (lang == 'python') {
+          lang = 'python2';
+        }
+        // alert(code)
+        code = base64encode(utf16to8(code));
+        code = encodeURIComponent(code);
+        var url = '/tryrun/runcode?lang=' + lang + '&code=' + code;
+
+        showtry(url + "&stype=nohead");
+        return;
+        if ($.inArray(lang, Gvar.remoteLangs) < 0) {
+          code = base64encode(utf16to8(code));
+          code = encodeURIComponent(code);
+
+          var url = '/tryrun/runcode?lang=' + lang + '&code=' + code;
+
+          kn.tryurl = url;
+
+          showtry(kn.tryurl + "&stype=nohead");
+
+          return;
+
+        }
+        var mode = lang;
+        var content = '', classname = '', stripcCode = '';
+        if (code != "") {
+
+          content = code;
+          var run_url = "https://run.w3cschool.cn/runcode";
+          if (mode == 'java') {
+            stripcCode = stripComments(content);
+            classinfo = stripcCode.match(/public\s{1,}class([^{]+){/);
+            if (classinfo === null) {
+              $("#demotype").html("<span style='color:red'>error:请确保有一个类是public</span>");
+              return;
+            }
+            if (typeof classinfo[1] !== 'undefined') {
+              classname = $.trim(classinfo[1]);
+            }
+            run_url = "https://run.w3cschool.cn/runcode";
+          }
+          $.ajax({
+            url: run_url,
+            type: "post",
+            data: { lang: mode, code: content, classname: classname },
+            dataType: "html",
+            success: function (msg) {
+              console.log(msg);
+              if (mode == 'php') {
+                $(mself).next(".coderes").addClass("on").html(msg);
+              } else {
+                $(mself).next(".coderes").addClass("on").html("<pre>" + HTMLEnCode(msg) + "</pre>");
+              }
+            }
+          });
+        }
+      });
+
+      $(document).on("click", function () {
+        $(".docblur").hide();
+      });
+
+      $(".onlinenote").show();
+
+      if (location.hash !== "") { // 修复锚点定位失效的问题
+        setTimeout(function () {
+          location.href = location.hash;
+        }, 300);
+      }
+
+      if (Gvar.activityflag > 0) { // 开启了活动
+        $.ajax({
+          url: "/getActivity",
+          type: "get",
+          dataType: "json",
+          success: function (msg) {
+            function loadad(content) {
+              var tpl = '<div class="activiey-area">' +
+                '<div class="activiey-bg"></div>' +
+                '<div class="activiey-main">' +
+                '<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">' + content + '</div></div>' +
+                '</div>';
+
+              $("body").append(tpl);
+
+              $(".activiey-main .close-btn").on("click", function () {
+                $(".activiey-area").hide();
+              });
+
+            }
+            if (msg.statusCode < 300) {
+              console.log(msg.data);
+              // 写入cookie
+              $.cookie("activity_showed", 1);
+              loadad(msg.data.wincontent);
+              toastr.success(msg.message);
+            } else {
+              toastr.warning(msg.message);
+            }
+          }
+        });
+      }
+      var kename = kn.kename;
+      var fid = "0";
+      var uid = '0';
+      $(document).on('keyup', function (e) {
+        var keyCode = e.keyCode;
+        var prev, next;
+        if (keyCode == 37) { // 上一篇
+          prev = $(".navigation-prev");
+          if (prev.length > 0 && !prev.is(":hidden")) {
+            location.href = prev.attr("href");
+          }
+        }
+        if (keyCode == 39) { // 下一篇
+          next = $(".navigation-next");
+          if (next.length > 0 && !next.is(":hidden")) {
+            location.href = next.attr("href");
+          }
+        }
+      });
+
+      // 图片放大
+      var pswpElement = document.querySelectorAll('.pswp')[0];
+
+      var articleImage = [];  // 图片放大后展示所用的数组
+      var options = {
+        index: 0 // 最先展示的图片索引
+      };
+      // 填充图片数组
+      document.querySelectorAll('#pro-mian img').forEach(function (image) {
+        var currentSrc = '';
+        if (image.currentSrc) {
+          currentSrc = image.currentSrc;
+        } else {
+          currentSrc = $(image).attr('src');
+        }
+        if (image.parentNode.tagName !== 'A') articleImage.push({ src: currentSrc, w: image.clientWidth * 1.5, h: image.clientHeight * 1.5 });
+      });
+
+      $('#pro-mian .content-bg img').each(function (index) {
+        $(this).on('click', function () {
+          // 修改为当前点击图片的索引
+          options = { index: index };
+
+          // 调用方法初始化放大插件
+          var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, articleImage, options);
+          gallery.init();
+        });
+      });
+
+      /*开启计时 准备记录积分*/
+      var vcreditfull = $.cookie('ypre_vcreditfull');
+      //console.log(vcreditfull);
+      if (vcreditfull == undefined && uid != '0' && uid != '') {
+        setTimeout(function () {
+          $.ajax({
+            url: "/project/setViewCredit",
+            type: "post",
+            data: { kename: kename },
+            dataType: "json",
+            success: function (msg) {
+              var statusCode = {
+                '200': 'success',
+                '400': 'warning',
+              };
+              var toastrType = statusCode[msg.statusCode];
+              if (msg.statusCode == 300 || msg.statusCode == 400) {
+                return;
+              }
+              toastr[toastrType](msg.message);
+            }
+          });
+        }, 30000);
+      }
+
+      hljs.initHighlightingOnLoad(); //高亮代码
+
+    });
+  </script>
+  <div style="display:none;"><a href="https://smalltool.github.io/">仿站小工具官网</a></div>
+</body>
+
+</html>

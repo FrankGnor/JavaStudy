@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../font/Lato-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: url(../font/Lato-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url(../font/Lato-Bold.ttf) format("truetype");
+}
+.qr_code_pc {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}
+#full-height-container #header {
+    width: 100%;
+    height: 80px;
+}
+#full-height-container #header_item {
+    position: fixed;
+    height: 80px;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    background: #F9F9f9;
+}
+#full-height-container #header_index {
+      width: 100%;
+      min-width: 1129px;
+      padding: 0 20px;
+      height: 80px;
+      line-height: 80px;
+      box-sizing: border-box;
+}
+#full-height-container #header-l,#full-height-container #header-r {
+			height: 80px;
+}
+
+#full-height-container #header-l li {
+	   padding: 0;
+	   white-space: normal;
+}
+#full-height-container #header-l li a:hover {
+	   text-decoration: none;
+}
+#full-height-container #header_index .searchbox {
+	  margin: 16px 0 0 0;
+}
+#full-height-container .footer-items li {
+   padding: 0;
+}
+#full-height-container .qrcode-box {
+    left: -182px;
+}
+#full-height-container .qrcode-box .j {
+    left: 60%;
+}
+#full-height-container #ccwrapper {
+    padding: 10px 20px 30px;
+}
+#full-height-container .challengeType .editorScrollDiv {
+    min-height: 560px !important;
+}
+#full-height-container .challengeType .codecamp-item {
+    float: right;
+}
+#full-height-container .abox-content {
+    margin: 20px 0 0;
+}
+#full-height-container .abox-content iframe,#full-height-container .abox-content img {
+    width: 960px !important;
+    height: 90px;
+    overflow: hidden;
+}
+.full-screen-body-background .bread-nav {
+    padding: 20px 20px 0;
+    overflow: hidden;
+}
+.full-screen-body-background .bread-nav #nav-map-btn {
+    background-color: #f0ad4e;
+    border: 1px solid #eea236;
+    color: #fff;
+}
+.full-screen-body-background .bread-nav #nav-map-btn:hover {
+    background-color: #ed9c28;
+    border: 1px solid #d58512;
+}
+.full-screen-body-background .bread-nav .editor-btn {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    color: #333;
+}
+.full-screen-body-background .bread-nav .editor-btn:hover {
+    background-color: #ebebeb;
+    border: 1px solid #adadad;
+}
+.challenge-instructions-title {
+    font-size: 22px;
+}
+@media (max-width:992px) {
+  div#header-l .header-menu {
+    display: none;
+  }
+}
+@media (max-width: 241px) {
+	div#header-l .header-menu {
+    display: none;
+  }
+}

@@ -1,0 +1,55 @@
+/* ↓↓↓↓↓↓↓ reset user agent stylesheet ↓↓↓↓↓↓↓ */
+* { 
+    box-sizing: border-box; margin: 0; padding: 0;
+    -webkit-tap-highlight-color: transparent;   /* IOS 可点击的元素，点击时会出现半透明的灰色背景 */
+}
+ol, ul { list-style: none; }
+a { color: inherit; text-decoration: none; -webkit-transition: color .24s ease; transition: color .24s ease; }
+img { border: none; vertical-align: middle; }
+:focus, a, button, input, textarea { outline: none; }   /* webkit 浏览器中的元素在 foucs 下都会有 outline: webkit-focus-ring-color auto 5px; 样式 */
+
+input { filter: none; } /* 清除 Firefox 自动填充 input 出现的屎黄色背景 */
+input::-ms-clear, input::-ms-reveal{ display: none; }   /* 清除 ie 下的叉叉 */
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 50px #fff inset; box-shadow: 0 0 0 50px #fff inset; }        /* 障眼法：清除 webkit 自动填充 input 出现的背景色 */
+input:focus:-webkit-autofill { -webkit-box-shadow: 0 0 0 50px #fff inset; box-shadow: 0 0 0 50px #fff inset; }
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   /* 字体抗锯齿渲染 */
+body, button, input, textarea, select {
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "PingFang SC", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+    background-color: #fff;
+    -webkit-text-size-adjust: none;
+}
+
+
+header, nav, main, section, footer { display: block; }
+
+
+/* ↓↓↓↓↓↓↓ global ↓↓↓↓↓↓↓ */
+.fl { float: left; }
+.fr { float: right; }
+.clearfix::after { content: ""; display: block; clear: both; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* 说明：伪类是为了解决 safari 不支持 text-align-last 的问题，由于伪类的 inline-block 会使 text-justify 元素产生一行空白间距，所以设置了 font-size 为 0 来消除此间距，可单独设置子元素的 font-size 复原字体 */
+.text-justify { text-align: justify;
+    text-align-last: justify;       /* 主流浏览器 */
+    text-justify: inter-ideograph;  /* ie */
+    font-size: 0;
+}
+.text-justify::after { content: ""; display: inline-block; width: 100%; }
+
+.disable-select {
+    -webkit-user-select: none;  /* safari */
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.single-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.double-ellipsis { overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }  /* 仅支持 webkit 内核，其它内核只会省略、不会出现省略号 */

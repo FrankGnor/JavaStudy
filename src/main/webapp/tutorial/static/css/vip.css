@@ -1,0 +1,709 @@
+
+
+/* reset w3.css */
+#header_index .searchbox input.box { box-sizing: content-box; }
+#header_notification_bar .notice-icon,
+.angle-down-icon,
+.sig-box .home-icon,
+.sig-box .mycv-icon,
+.sig-box .cog-icon,
+.sig-box .signout-icon,
+.sig-box .dropdown-list a:hover .home-icon,
+.sig-box .dropdown-list a:hover .mycv-icon,
+.sig-box .dropdown-list a:hover .cog-icon,
+.sig-box .dropdown-list a:hover .signout-icon { background: none; }
+
+/* 不显示右侧悬浮标广告 */
+#rfbanner {display: none !important;}
+
+/* ----------------------------------- vip页面样式（说明：带 vip2 的是 vip2.html 专有的）  ----------------------------------- */
+
+body { min-width: 1140px; background-color: #fff; padding-bottom: 70px;}
+.graybg { background-color: #f9f9f9; }
+
+.layer { width: 1100px; margin: 0 auto; padding: 48px 0; }
+.layer-title { margin-bottom: 40px; font-size: 32px; font-weight: 600; }
+.layer-title .icon-title,.layer-sub-title .icon-title {display: flex;align-items: center;justify-content: center;}
+.layer-title .icon-title:before {content: '';background-image: url('../image/icon-title-left.png');width: 36px;height: 30px;margin-right: 25px;}
+.layer-title .icon-title:after {content: '';background-image: url('../image/icon-title-right.png');width: 36px;height: 30px;margin-left: 25px;}
+.layer-title .icon-title span {margin: 0 5px;}
+.layer-title .sub-title { margin-top: 20px; font-size: 20px;color: #333;font-weight: 500; }
+
+.layer-sub-title {margin-bottom: 20px; font-size: 24px; }
+.layer-sub-title .icon-title:before {content: '';background-image: url('../image/icon-subtitle-left.png');width: 218px;height: 30px;margin-right: 25px;}
+.layer-sub-title .icon-title:after {content: '';background-image: url('../image/icon-subtitle-right.png');width: 218px;height: 30px;margin-left: 25px;}
+
+.trape-icon {position: absolute;top: 24px;left: 24px;width: 186px;height: 32px;line-height: 32px;background-color: #424242;color: #FFDC95;transform: translate(-50%, -50%) rotate(-45deg);font-size: 14px;font-weight: normal;}
+.addon-icon { position: absolute; top: -6px; left: -1px; z-index: 1; }
+/* .addon-icon::after { content: ''; position: absolute; top: 0; right: -8px; border-width: 4px 4px 0; border-style: solid; border-color: #560000 transparent transparent transparent; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } */
+.addon-icon .addon-tag { position: relative; top: -10px; left: -12px; z-index: 1; padding: 10px 37px 28px 27px; font-size: 18px; color: #FFDC95; background-image: url('../image/recommend-bg.png'); background-size: 100% 100%; background-repeat: no-repeat; }
+.dot-ico::before {content: "•";padding: 0 5px;}
+.text-space {margin: 0 5px;}
+.highlight-text {color: #ca8308;}
+
+.layer-openvip { width: 240px; margin: 0 auto !important; }
+
+/* 会员标识图标 */
+.novip-icon {background-image: url("../image/vip-sicon0.png");}
+.vip-icon {background-image: url("../image/vip-sicon1.png");}
+.svip-icon {background-image: url("../image/vip-sicon2.png");}
+.allvip-icon { background-image: url("../image/all-situations-vip.png"); }
+.vip-sign-icon {display: inline-block;width: 24px;height: 24px;vertical-align: middle;background-size: 24px 24px;}
+
+/* 会员特权图标  */
+.priv-icon { width: 64px; height: 64px; display: inline-block; vertical-align: middle; background: url("../image/webvip-priv-sprite.png") no-repeat 0 0/500% 200%; }
+.priv-icon-minic { background-position: 0 0; }
+.priv-icon-exam { background-position: 25% 0; }
+.priv-icon-tool { background-position: 50% 0; }
+.priv-icon-vouth { background-position: 75% 0; }
+.priv-icon-download { background-position: 100% 0; }
+.priv-icon-viptag { background-position: 0 100%; }
+.priv-icon-cert { background-position: 25% 100%; }
+.priv-icon-integral { background-position: 50% 100%; }
+
+/* 装饰按钮 */
+.decorate-btn { position: relative; height: 52px; line-height: 52px; margin: 18px 25px 0; border-radius: 100px; font-size: 18px; text-align: center; cursor: pointer; color: #702707;  -webkit-transition: all 0.24s; transition: all 0.24s; background-image: url('../image/decorate-btn.png'); background-repeat: no-repeat; background-size: 100% 100%; }
+.decorate-sv-btn { background-image: url(../image/decorate-sv-btn.png); }
+.decorate-btn:hover { -webkit-transform: scale(1.05); transform: scale(1.05); color: #983909;}
+.decorate-btn-inner { position: relative; z-index: 2; border-radius: inherit; }
+/* .decorate-btn::before { content: ""; position: absolute; top: 4px; left: 6%; z-index: 3; width: 36%; height: 6px; background-color: rgba(255, 255, 255, 0.4); border-radius: 100px; } */
+
+/* 开通会员按钮 */
+.openvip { cursor: pointer; }
+
+
+/*====== 会员banner区域 ====== */
+.vip-banner {width: 100%;min-width: 1140px;height: 300px;background: #211F1C;}
+.activity-bgcolor { background: linear-gradient(180deg, #FC7717 0%, #FEE55E 100%); } 
+.vip-wrapper {position: relative;background-image: url("../image/vip-banner-decoration.png");height: 300px;padding: 0;}
+.vip-banner-content {position: absolute;top: 0;left: 0;width: 668px;height: 300px;}
+.vip-banner-content img {width: 100%;}
+
+.vip-topitem {width: 320px;height: 208px;position: absolute;right: 0;top: 46px;background-color: #fff;border-radius: 4px;}
+.vip-topitem2 {height: 234px;top: 33px;}
+.vip-topbox {padding: 25px;overflow: hidden;text-align: center;font-size: 14px;color: #333;}
+.vip-topinfo {font-size: 16px;}
+.vip-topinfo .avatar-img {display: inline-block;width: 64px;height: 64px;border-radius: 50%;vertical-align: middle;margin-right: 5px;border: 2px solid #FFF;box-shadow: 0 3px 3px rgba(193, 191, 192, 0.5);}
+.vip-topinfo .topinfo-username {max-width: 150px;display: inline-block;vertical-align: middle;}
+.vip-topinfo a {color: #333;}
+.vip-topinfo a:hover {color: #fe6a00;}
+.topinfo-usermeta {margin-top: 10px;}
+.topinfo-vipexpired {color: #fe6a00;}
+.topinfo-usermeta span {margin-left: 5px;}
+.topinfo-btn {width: 100%;height: 42px;line-height: 42px;display: block;font-size: 16px;margin: 15px 0 0;}
+.topinfo-btn2 {font-size: 15px;}
+.topinfo-btn:hover {color: #983909;}
+.topinfo-tips {margin-top: 10px;font-size: 15px;color: #666;}
+.topinfo-tips span {font-size: 15px;font-weight: bold;margin: 0 4px;color: #ca8308;}
+
+
+/* ======= 会员满意度反馈 ======= */
+/* 会员反馈按钮 */
+#triggerBtn {cursor: pointer; z-index:9999; position: fixed;  bottom: 400px;right: 0px;  height: 56px; line-height: 20px; width: 130px; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 30px; background: linear-gradient(to right, #FDF8F3 , #FAEAD4);  text-align: center;  box-shadow: 0px 2px 4px 0px rgba(183,183,183,0.6); border: 1px solid rgba(255,255,255,0); }
+/* 会员反馈图标 */
+#triggerBtn img {width: 46px; height: 46px; position: absolute; top: 4px; right: 62px;}
+/* 会员反馈文字 */
+#triggerBtn .advance-title {position: absolute; top: 8px; left: 82px; width: 32px; height: 41px; color: rgba(141, 89, 36, 1); font-size: 14px; text-align: left; font-family: "SourceHanSansSC-regular";}
+/*点击会员反馈后的模态框*/
+.modal {display: none;z-index: 9999;position: fixed;bottom: 98px;right:0;width: 465px;height: 202px;background-color: #fff;border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;-o-border-radius: 10px;box-shadow: 0px 2px 10px 0px rgba(185,185,185,0.4);border: 1px solid rgba(255,231,194,1);transition: height 0.24s;-webkit-transition: height 0.24s;-moz-transition: height 0.24s;-ms-transition: height 0.24s;-o-transition: height 0.24s;}
+/*模态框动画*/
+.modal .modal-content {animation: rightLeft 0.5s;-webkit-animation: rightLeft 0.5s;}
+/* 点击按钮后，模态框动画*/
+@keyframes rightLeft {
+    from {right: -100px; opacity: 0}
+    to {left: 0px; opacity: 1}
+}
+/*模态框头部文字*/
+.modal-content .modal-header {padding-top: 30px;padding-bottom: 30px;color: rgba(16,16,16,1);font-size: 22px;text-align: center;font-family: "SourceHanSansSC-regular";}
+/*模态框内容未选中设置*/
+.modal .modal-body {display: flex;justify-content: space-between;align-items: center;margin:0 14px;}
+/* 模态框满意一般不满意未选中按钮 */
+.modal-body  .modal-child {position: relative;height: 50px;width: 135px;background-color: rgba(247,247,247,1);border: 1px solid rgba(255,255,255,0);-webkit-border-radius: 6px; -moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;cursor: pointer;}
+/* 未选中图标 */
+.modal-child  img {width: 35px;height: 35px; position: absolute; top:6px; left: 16px;}
+/* 未选中文字 */
+.modal-child .child-word {position: absolute;line-height: 20px;top: 10px;left: 70px;height: 25px; width: 54px;line-height: 25px;color: #666;font-size: 18px;text-align: left;font-family: "PingFangSC-regular";}
+/*模态框内容选中时的设置*/ 
+.modal-body  .modal-children {background-color: rgba(255, 248, 236, 1);border: 1px solid rgba(255, 242, 221, 1);}
+/*图标选中时的设置 */
+.modal-children  img {width: 35px;height: 35px; position: absolute; top:6px; left: 16px;}
+/*文本选中时的设置*/
+.child-words {color: rgba(141, 89, 36, 1) !important;}
+/* 列表内容选中时的设置 */
+.actives { background-color: rgba(255, 248, 236, 1)!important; color: rgba(141, 89, 36, 1)!important; border: 1px solid rgba(255, 236, 207, 1)!important; }
+/* 提交按钮设置 */
+#showTextarea .sub {position: fixed; right: 24px;height:35px; width: 90px;border-radius: 5px;background-color: rgba(255, 202, 119, 1); color: rgba(124, 69, 20, 1); font-size: 16px;text-align: center;font-family: "Microsoft Yahei"; border: 1px solid rgba(236, 183, 81, 1);}
+/*模态框内容相同的设置*/
+.improve {color: #FF9668; font-family: "PingFangSC-regular"; font-size: 14px; margin: 12px 0 12px 18px;}
+.options {cursor: pointer; display: flex; flex-wrap: wrap;padding: 0 22px;align-items: center; justify-content: flex-start; }
+.options .notGood, .options .commons , .options .veryGood {margin: 7px 5px; padding: 0 5px; line-height: 29px; border-radius: 5px; background-color: rgba(249, 249, 249, 1); color: #666;font-size: 14px;text-align: center;font-family: "Microsoft Yahei"; border: 1px solid rgba(255, 255, 255, 0);}
+/* 留言框设置 */
+#showTextarea .added {padding: 10px 20px; margin: 8px 18px 13px 22px;height: 104px; width: 428px; line-height: 17px; resize:none; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; font-size: 14px; background-color: rgba(249, 249, 249, 1);text-align: left; border: 1px solid rgba(255,255,255,0);color: rgba(81, 81, 81, 1); }
+/* 关闭按钮 */
+.modal .circle {position: absolute;bottom: -72px;right: 0;width: 50px;height: 50px;text-align: center;font-size: 32px;line-height: 50px;border-radius: 25px;background-color: #FFE7C2 ;-webkit-border-radius: 25px;-moz-border-radius: 25px;-ms-border-radius: 25px;-o-border-radius: 25px;}
+/* 关闭按钮叉叉图标 */
+.circle .i-icon { vertical-align: baseline; color: rgba(124, 69, 20, 1);}
+/* 提交按钮和关闭按钮经过时 */
+.sub,.circle:hover {text-decoration: none;cursor: pointer;}
+/* 提交后的新模态框 */
+.newModal {display: none;z-index: 9999;position: absolute;right: 0px;bottom: 90px;width: 465px;height: 267px;line-height: 20px;border-radius: 10px;text-align: center;box-shadow: 0px 2px 10px 0px rgba(185, 185, 185, 0.4);border: 1px solid rgba(255, 231, 194, 1);background-color: #ffff;}
+/* 新模态框的文本 */
+.newModal .thanks { margin: 0 auto; width: 390px; height: 40px;color: rgba(166, 166, 166, 1); font-size: 16px; font-family: PingFangSC-regular;}
+.newModal .thanks p {padding: 5px 0;}
+/* 打勾图标*/
+.modal-content .great  { font-size: 80px;color: rgba(255, 202, 119, 1); margin-bottom: 20px;}
+
+
+
+/* ========================================= */
+
+/* ======= 会员特权介绍 ======= */
+.vip-priv-grid { margin-right: -16px;}
+.vip-priv-grid .vip-priv-point { position: relative; width: 263px; margin: 0 16px 16px 0; padding: 25px; background-color: #FFFDF9; border-radius: 6px; overflow: hidden;cursor: pointer;}
+.vip-priv-grid .vip-priv-point:nth-child(even) {background-color: #F9F9F9;}
+.vip-priv-grid .vip-priv-point .trape-icon {top: 36px;left: 36px;}
+.vip-priv-grid .vip-priv-point .priv-label { color: #B98E55; font-size: 18px; margin-top: 15px; }
+.vip-priv-grid .vip-priv-point .priv-desc { color: #666; font-size: 14px; margin-top: 8px; }
+
+/*====== 会员权益对比 ======*/
+.vip-privilege-card-wrap { margin-top: 30px;}
+.vip-privilege-card-wrap .toggle-switch { font-size: 16px; color: #ca8308; cursor: pointer;}
+.vip-privilege-card-wrap .toggle-switch > .i-icon { margin-left: 4px; font-size: 28px; transition: 0.24s; }
+.vip-privilege-card-wrap .toggle-switch.on > .i-icon { transform: rotate(180deg); }
+.vip-privilege-card-wrap .toggle-switch.on + .vip-privilege-card { display: none; }
+
+.vip-privilege-card { display: flex; margin: 20px 0; }
+.vip-privilege-card .privilege-ul { flex: 1; border: 1px solid #ddd; background-color: #fff; }
+.vip-privilege-card .privilege-ul.name-ul,
+.vip-privilege-card .privilege-ul.novip-ul { border-right: 0; }
+.vip-privilege-card .privilege-ul.active { box-shadow: 0 2px 6px 0 rgba(185, 185, 185, 0.62); border: 1px solid rgba(236, 196, 135, 0.65); transform: scale(1.02); }
+.vip-privilege-card .privilege-ul .privilege-item { height: 60px; font-size: 16px; text-align: center; line-height: 60px; border-top: 1px solid #ededed; }
+.vip-privilege-card .privilege-ul.name-ul .privilege-item { font-weight: 600; }
+.vip-privilege-card .privilege-ul.svip-ul .privilege-item { background-color: #FFF8F0; }
+
+.vip-privilege-card .privilege-ul .privilege-item.first-item { position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 246px; padding: 30px 32px; border-top: 0; background-color: #f9f9f9; color: #333; text-align: left; line-height: 1.5; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-tag { position: absolute; top: 0; right: 0; padding: 0 12px; color: #fff; border-top-right-radius: 15px; border-bottom-left-radius: 15px; background-color: #fe5a5a; transform: translateY(-50%); }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-title { display: flex; align-items: center; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-title-text { font-size: 24px; margin-left: 4px; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-price { display: flex; align-items: baseline; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-price-num { margin: 0 2px; font-size: 36px; font-weight: 600; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-price-del { margin-left: 20px; color: #999; text-decoration: line-through; }
+.vip-privilege-card .privilege-ul .privilege-item.first-item .first-item-button { font-size: 20px; color: #754e1a; text-align: center; line-height: 50px; border-radius: 8px; cursor: pointer; }
+.vip-privilege-card .privilege-ul.name-ul .privilege-item.first-item { justify-content: center; }
+.vip-privilege-card .privilege-ul.novip-ul .privilege-item.first-item .first-item-price { color: #999; }
+.vip-privilege-card .privilege-ul.novip-ul .privilege-item.first-item .first-item-button { color: #666; background-color: #ddd; }
+.vip-privilege-card .privilege-ul.vip-ul .privilege-item.first-item .first-item-price { color: #CA8308; }
+.vip-privilege-card .privilege-ul.vip-ul .privilege-item.first-item .first-item-button { color: #CA8308; border: 1px solid #ca8308; }
+.vip-privilege-card .privilege-ul.svip-ul .privilege-item.first-item { background-color: #211F1C; color: #fff; }
+.vip-privilege-card .privilege-ul.svip-ul .privilege-item.first-item .first-item-button { background-image: linear-gradient(90deg, #f5e3ca, #e9b568); }
+
+.vip-privilege-card .privilege-ul .privilege-item .privilege-icon {display: inline-block;vertical-align: middle; margin-right: 5px; background-repeat: no-repeat;}
+.vip-privilege-card .privilege-ul .privilege-item .vs-icon {width: 36px; height: 25px;background-image: url('../image/vs-icon.png')}
+.vip-privilege-card .privilege-ul .privilege-item .novip-icon,.vip-privilege-card .privilege-ul .privilege-item .svip-icon,.vip-privilege-card .privilege-ul .privilege-item .allvip-icon {width: 32px; height: 32px;background-size: 32px 32px;}
+.vip-privilege-card .privilege-ul .privilege-item .privilege-title {display: inline-block; vertical-align: middle; height: 32px; line-height: 32px; font-size: 20px;}
+.vip-privilege-card .privilege-ul.svip-ul .privilege-item .privilege-title {color: #7b5a21;}
+.vip-privilege-card .privilege-ul .privilege-item .privilege-text {font-weight: normal;}
+.vip-privilege-card .privilege-ul .privilege-item .i-icon-close {font-size: 26px;}
+.vip-privilege-card .privilege-ul .privilege-item .saveprice-text {margin-left: 10px;font-size: 14px; color: #333;}
+.vip-privilege-card .privilege-ul .privilege-item .saveprice-text .saveprice-icon {width: 26px; height: 28px;background-image: url('../image/saveprice-icon.png');background-size: 26px 28px; display: inline-block;vertical-align: middle;margin-right: 2px;}
+
+
+
+.vip-service-tips {font-size: 15px;color: #333;text-align: center;margin-top: 25px;}
+
+
+/* ======= 课程列表模块 ======= */
+.course-layer .layer-title > img { border-radius: 6px; }
+
+.course-cell-nav {width: 900px; margin: 0 auto;}
+.course-cell-nav .tab-name {display: inline-block; width: 156px;height: 45px;line-height: 45px;background-color: #fff;border: 1px solid #e2e2e2;border-radius: 8px;margin: 0 10px 20px 10px;font-size: 16px;color: #7D4716;text-align: center;cursor: pointer;box-shadow: 0 2px 8px rgba(0,0,0,.1);}
+.course-cell-nav .tab-name:hover,.course-cell-nav .tab-name.active {background: #F6D6BD;background: -webkit-linear-gradient(180deg,#F6D6BD,#F0C68B);background: linear-gradient(180deg,#F6D6BD,#F0C68B);border: 1px solid #F6D6BD; color: #7D4716; }
+
+.course-cell { margin-top: 30px; }
+
+.course-cell-header { font-size: 20px; font-weight: 600; }
+.course-cell-header .title { margin-right: 12px; }
+.course-cell-header .title::before { content: ""; display: inline-block; margin-right: 10px; border-style: solid; border-color: transparent; border-width: 12px 0 12px 12px; border-left-color: #F0C68B; border-radius: 10px; vertical-align: -5px; }
+
+.course-cell-header .more { color: #666; font-size: 14px; font-weight: 400; line-height: 27px; }
+.course-cell-header .more:hover { color: #e0b45a; }
+
+/* .course-cell {display: none;} */
+.course-cell .course-pack-price { margin-top: 15px; font-size: 15px; }
+.course-cell .course-pack-price > span { font-weight: 600; color: #fe6a00; }
+
+.course-cell-list .course-wrap { width: 245px; margin: 15px 40px 15px 0;}
+.course-cell-list .course-wrap:nth-child(4n) { margin-right: 0; }
+
+.course-cell-list .course-box { display: block; }
+.course-cell-list .course-cover { overflow: hidden; height: 136px; border-radius: 6px; transition: all .24s; }
+.course-cell-list .course-wrap:hover .course-cover { box-shadow: 0 3px 5px rgba(0, 0, 0, .3); }
+.course-cell-list .course-cover img {width: 245px;height: 136px;}
+.course-cell-list .course-body {padding: 0 6px;}
+.course-cell-list .course-title { margin-top: 12px;font-size: 16px; color: #333; font-weight: 600; transition: all .24s; }
+.course-cell-list .course-wrap:hover .course-title { color: #fe6a00; }
+.course-cell-list .course-desc { margin-top: 6px; height: 40px;line-height: 20px; font-size: 13px; color: #666; }
+.course-cell-list .course-price { margin-top: 12px; font-size: 13px; line-height: 24px;}
+.course-cell-list .course-price .cur-price {font-size: 16px; color: #fe6a00; margin-right: 2px;}
+.course-cell-list .line-through {text-decoration: line-through;color: #666 !important;}
+.course-cell-list .vipinfo-text {font-size: 16px; color: #fe6a00;}
+
+
+/* ======= VIP专享课程礼券 ======= */
+.vip-coupon-card {display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;-webkit-justify-content: space-between;justify-content: space-between;margin-bottom: 40px;}
+.vip-coupon-card-left {width: 450px;text-align: center;}
+.vip-coupon-title {display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center;justify-content: center;}
+.vip-coupon-sign {width: 120px;height: 92px;display: inline-block;background-image: url("../image/vip-coupon-sign.png");background-size: contain;}
+.vip-coupon-label {font-size: 40px; color: #67512b; font-weight: 600;letter-spacing: 2px;margin-left: 25px;}
+.vip-coupon-desc::before { content: "";display: inline-block;width: 100px;height: 4px;background-color: #67512b;margin: 30px 0;}
+.vip-coupon-desc p {font-size: 18px;color: #333;letter-spacing: 2px;margin-bottom: 10px;}
+
+.vip-coupon-card-right {width: 650px;position: relative; padding: 10px 50px 25px;font-size: 15px;color: #666; background-color: #f9f9f9;border-radius: 6px;cursor: pointer;}
+.vip-coupon-card-right::before {content: '';position: absolute;top: 35%;left: -28px;z-index: -1;border-width: 30px 30px 30px 0;border-style: solid;border-color: transparent #f9f9f9 transparent;}
+.vip-coupon-card-right .vip-coupon-img {display: block;width: 550px;height: 256px; margin: 0 auto;}
+
+
+/*====== 会员购买动态 ======*/
+.vipusers-content {height: 263px; background-color: #f9d9b7;border-radius: 12px;}
+.vipusers-block { position: relative; height: 255px; background-color: #fff;border: 1px solid #F5E1CD; border-radius: 12px; margin-top: 54px; margin-right: 8px;margin-left: -8px;}
+.vipusers-title-bg {width: 450px;height: 80px;background: url("../image/vipusers-title-bg.png") no-repeat top center/contain;position: absolute;top: -14px;left: 50%;transform: translateX(-50%);box-sizing: border-box;}
+.vipusers-title {font-size: 28px;color: #7D4716;text-align: center;line-height: 80px;}
+.vipusers-title span {margin: 0 5px;}
+.vipusers-list { padding-top: 90px; padding-left: 128px; }
+.vipusers-list ul {height: 135px; overflow: hidden; }
+.vipusers-list li { display: flex; float: left; width: 50%; height: 40px; padding-right: 114px; line-height: 40px;font-size: 15px;color: #4c3b1e;margin-bottom: 5px;}
+.vipusers-list li a {float: left;margin-right: 5px;color: #4c3b1e;}
+.vipusers-list li a img {display: inline-block;width: 32px;height: 32px;border-radius: 50%;vertical-align: middle;margin-right: 5px;}
+.vipusers-list li span { float: right; vertical-align: middle;}
+.vipusers-list li .vip-sicon {margin: 0 3px;}
+.vipusers-list li .vipusers-name {width: 90px;height: 40px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.vipusers-list li .vipusers-info .highlight-text {margin-left: 8px;}
+
+/*====== 学员课程评价 ======*/
+.course-eval-card {margin-top: 40px;}
+.course-eval-card .swiper-container {padding: 0 22px;}
+.course-eval-card .swiper-button-next,.course-eval-card .swiper-button-prev {width:44px;height: 44px;background-size: 44px 44px;border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.1);}
+.course-eval-card .swiper-button-prev {background-image:url("../image/button-prev.png");left: 0;}
+.course-eval-card .swiper-button-next {background-image:url("../image/button-next.png");right: 0;}
+.course-eval-card .swiper-pagination-bullet {width: 10px;height: 10px;}
+.course-eval-card .swiper-pagination-bullet-active {background: #f9ab3a;}
+
+.course-eval-item {position: relative; height: 220px; background-color: #fff;border: 1px solid #F5E1CD;border-radius: 12px;padding: 0 30px;margin: 48px 0;}
+.course-eval-item .course-eval-useravatar {position: absolute;top: -36px;left: 50%;transform: translateX(-50%);}
+.course-eval-item .course-eval-useravatar .avatar-img {display: block; width: 72px;height: 72px;border-radius: 50%;box-shadow: 0px 3px 3px rgba(193, 191, 192, 0.5);}
+.course-eval-item .course-eval-username {font-size: 16px;color: #333;font-weight: 600; text-align: center;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin-top: 60px;}
+.course-eval-item .course-eval-desc {font-size: 14px;color: #666;line-height: 24px;overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 3;margin-top: 15px;}
+
+
+/* ======= 会员省钱计算模块 ======= */
+#vip-coursepack-compare .icon-title-saveprice {display: flex;align-items: center;justify-content: center;}
+#vip-coursepack-compare .icon-title-saveprice:after {content: '';background-image: url("../image/icon-title-saveprice.png"); background-size: 40px 40px; width: 40px;height: 40px;margin-left: 15px;}
+
+#vip-coursepack-compare .card { position: relative; padding: 40px 0 19px; border-radius: 6px; background-color: #fff; box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
+#vip-coursepack-compare .card .coursepack-priv-item {padding: 0 30px 20px;font-size: 16px;color: #333;}
+#vip-coursepack-compare .card .coursepack-priv-summer {font-weight: 600;}
+#vip-coursepack-compare .card .coursepack-priv-summer .label {display: -webkit-flex;display: flex;-webkit-box-align: center;align-items: center; font-size: 18px;}
+#vip-coursepack-compare .card .coursepack-priv-summer .label::before {display: inline-block; width: 20px;height: 20px;vertical-align: middle; margin-right: 8px; content: '';background-size: contain;background-repeat: no-repeat;}
+#vip-coursepack-compare .card .coursepack-priv-summer .allvip-label::before { background-image: url("../image/allvip-priv.png"); }
+#vip-coursepack-compare .card .coursepack-priv-summer .svip-label::before { background-image: url("../image/svip-priv.png"); }
+#vip-coursepack-compare .card .coursepack-priv-detail {color: #666;margin-top: 8px;font-weight: 400; font-size: 16px;}
+#vip-coursepack-compare .card .coursepack-priv-detail .label { font-size: 16px; }
+#vip-coursepack-compare .card .coursepack-priv-subtitle { position: relative; font-weight: 400; margin-bottom: 20px; }
+#vip-coursepack-compare .card .coursepack-list .coursepack-priv-item:last-child .coursepack-priv-subtitle:nth-of-type(2) { margin-bottom: 0; }
+#vip-coursepack-compare .card .coursepack-priv-subtitle::before { position: absolute; top: 50%; left: 4px; transform: translateY(-50%); content: ''; border: 1px solid #333; background-color: #f0c68b; border-radius: 50%; width: 10px; height: 10px; }
+
+#vip-coursepack-compare .card .vip-saveprice-bg { position: relative; top: 15px; left: 62%; background-repeat: no-repeat; background-size: 100% 100%; padding: 2px 12px 10px; width: fit-content; }
+#vip-coursepack-compare .card .allvip-save-bg { background-image: url("../image/allvip-save-bg.png"); }
+#vip-coursepack-compare .card .svip-save-bg { background-image: url("../image/svip-save-bg.png"); }
+#vip-coursepack-compare .card .vip-saveprice-text {font-size: 14px; color: #fff; text-align: center;}
+/* #vip-coursepack-compare .card .vip-saveprice-text span {font-size: 20px; color: #EBBF87; font-weight: 600;} */
+#vip-coursepack-compare .card .coursepack-openvip {height: 56px; overflow: hidden;}
+#vip-coursepack-compare .card .coursepack-openvip .trape-icon {top: 24px; left: 32px; z-index: 10;}
+#vip-coursepack-compare .card .coursepack-openvip .coursepack-yearprice {margin-left: 10px;}
+#vip-coursepack-compare .card .coursepack-openvip .coursepack-yearprice strong {font-size: 22px;}
+#vip-coursepack-compare .card .coursepack-openvip .coursepack-dayprice {font-size: 16px;margin-left: 8px;}
+
+
+/* ======= 常见问题 ======= */
+#vip-question .layer-title::before { content: "?"; display: inline-block; width: 36px; height: 36px; margin-right: 12px; border-radius: 50%; background-color: #f0c68b; color: #fff; line-height: 36px; vertical-align: text-bottom; }
+
+.question-item { width: 100%;overflow: hidden;text-align: left;}
+.question-list { width: 45%;float: left;}
+.question-list2 { margin-left: 10%;}
+.question-box { margin-bottom: 30px;}
+.question-box h4 { font-size: 16px;font-weight: 600;color: #333;}
+.question-box p {font-size: 15px;color: #666;line-height: 1.6;margin-top: 10px;}
+.notes-list {margin: 30px 0 0 0;padding: 15px 30px 15px 15px;border-left: 5px solid #eee;border-radius: 0px 4px 4px 0;background-color: #FAEAE6;border-color: #ed4e2a;text-align: left;}
+.notes-list p {line-height: 24px;font-size: 14px;color: #333;margin: 0 0 10px;}
+.notes-list p:last-child {margin-bottom: 0;}
+
+/* ====== 底部浮框 ======= */
+.fixed-bottom-bar {position: fixed;width: 100%;height: 70px;z-index: 999;bottom: 0;left: 0;background: #353030; display: none;}
+.fixed-bottom-bar .fixed-bottom-center {width: 1100px;height: 70px;margin: 0 auto;color: #ebbf87;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: space-between;justify-content: space-between;}
+.fixed-bottom-bar .fixed-bottom-box {display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;}
+.fixed-bottom-box .fixed-bottom-sign {width: 100px;margin-top: -20px;}
+.fixed-bottom-bar .fixed-bottom-title {font-size: 26px; margin-left: 40px;}
+.fixed-bottom-bar .fixed-bottom-desc {font-size: 18px;margin-left: 20px;}
+.fixed-bottom-bar .fixed-bottom-buyvip {position: relative; width: 250px;height: 94px;line-height: 94px; background-image: url("../image/fixed-bottom-buyvip.png");text-align: center; font-size: 24px;color: #983909;top: -3px;padding-left: 15px;}
+
+
+/* ======= 会员特权模态框 ======= */
+.center-dialog-wrapper {width: 100%;height: 100%;top: 0;bottom: 0;left: 0;right: 0;position: fixed;z-index: 999;display: none;}
+.center-dialog-wrapper .center-dialog-wrapper-effect {width: 100%;height: 100%;position: absolute;background-color: #000;opacity: .5;filter: alpha(Opacity=50);}
+.center-dialog-wrapper .center-dialog-container {width: 480px; margin-left: -240px; margin-top: -145px;position: absolute;left: 50%;top: 50%;background-color: #fff;border-radius: 6px;}
+.center-dialog-body {padding: 30px;}
+.center-dialog-title {font-size: 24px;color: #ca8308;}
+.center-dialog-wrapper .center-dialog-close {position: absolute;right: 15px;top: 15px;cursor: pointer;}
+.center-dialog-wrapper .center-dialog-close i {font-size: 22px; color: #666;}
+.center-dialog-wrapper .center-dialog-close:hover i {color: #ca8308;}
+.center-dialog-content {display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: space-between;justify-content: space-between;margin: 30px 0;}
+.center-dialog-img {background-color: #FCF7F1;border-radius: 50%;padding: 15px;}
+.center-dialog-text {width: 300px;font-size: 16px;color: #333;line-height: 24px;}
+
+
+/* ====== 会员支付模态框 ======*/
+.pay-vip-Box{
+    background-color:rgba(0, 0, 0, 0.8);
+    height:100%;
+    left:0;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1200;
+}
+.pay-vip-content{
+    background-color: #fff;
+    border-radius: 4px;
+    -moz-border-radius: 4px;     
+    -webkit-border-radius: 4px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 10%;
+    width: 730px;
+    height: auto;
+    min-height: 430px;
+    z-index: 1200;
+}
+.pay-vip-top{
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 20px;
+}
+.pay-vip-result{
+    margin-top: 45px;
+    padding: 0 30px;
+}
+.pay-vip-result a{
+    border:1px solid #FCF4E9;
+    background-color: #FCF4E9;
+    padding: 10px 75px;
+    color: #7D4716;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.pay-vip-result #pay-error {
+    border:1px solid #F0C68B;
+    background-color: #F0C68B;
+}
+.pay-vip-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+.pay-vip-close{
+    color: #9e9e9e;
+    cursor: pointer;
+    float: right;
+    font-weight: 700;
+    height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    width: 20px;
+}
+.pay-vip-price{
+    text-align: left;
+    margin: 0 10px 20px 25px;
+}
+.pay-vip-price-first{
+    margin-top: 30px;
+}
+.pay-vip-login-first{
+    padding-right: 125px;
+    text-align: right !important;
+}
+.pay-vip-price span {
+    margin-right: 12px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.pay-vip-price .viptips-tag {
+    color: #F59D4F;
+}
+.pay-vip-login{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+.vip-input-user{
+    padding: 10px 40px 10px 10px;
+}
+.vip-sig-item{
+    margin-top: 20px;
+}
+.pay-vip-btn{
+    display: inline-block;
+    padding: 8px 27px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    margin-right: 15px;
+}
+
+.pay-vip-btn-ck{
+    position: relative;
+    border: 1px solid #E7B973;
+    color: #333;
+}
+.pay-vip-btn:hover{
+    border: 1px solid #E7B973;
+    color: #333;
+}
+.pay-vip-btn-ck::after {
+    content: "";
+    width: 22px;
+    height: 15px;
+    position: absolute;
+    background: url("../image/select-icon.png") no-repeat;
+    right: 0;
+    bottom: 0;
+}
+/* 周年超值价 */
+.pay-vip-price .pay-vip-month { position: relative; }
+.pay-vip-price .pay-vip-month span { 
+    position: absolute;
+    left: 0;
+    top: -16px;
+    padding: 2px 4px;
+    font-size: 12px;
+    background: linear-gradient(130deg,#ffa449,#ff354e);
+    color: #fff;
+    border-radius: 4px 0 4px 0;
+}
+.pay-vip-paytype{
+    margin: 0 10px 20px 25px;
+    text-align: left;
+    font-size: 16px;
+}
+.pay-vip-paytype span{
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.pay-vip-paytype img{
+    height: 30px;
+    margin-right:12px;
+    vertical-align: middle;
+}
+.controls{
+    display:inline-block;
+    vertical-align: middle;
+}
+.form-con-surplus {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #666;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px 8px;
+    vertical-align: middle;
+    width: 80px;
+    text-align: center;
+}
+.img-gray{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+.pay-vip-voucher{
+    margin: 0 10px 10px 25px;
+    text-align: left;
+    font-size: 16px;
+}
+.pay-vip-voucher span{
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.pay-vip-voucher .vou {
+    margin-right: 0;
+}
+.pay-fbi-voucher{
+    font-size: 14px;
+    color: #3e3e3e;
+    margin: 0 10px 15px 115px;
+    text-align: left;
+}
+.pay-vip-gray{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+.pay-fbi-waring{
+    font-size: 14px;
+    color: #3e3e3e;
+    margin: 0 25px 35px;
+    text-align: left;
+}
+.pay-vip-gopay {
+    text-align: center;
+    margin: 25px 0;
+}
+.pay-vip-gopay a.gopay-btn {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+.pay-vip-result-title{
+    border-bottom:1px solid #9e9e9e;
+    padding-bottom:8px;
+    font-size:28px;
+}
+.pay-vip-result-waring{
+    margin-top:13px;
+    font-size:14px;
+}
+.pay-vip-result-btn{
+    margin-top:50px;
+    text-align:center;
+}
+#pay-resulttotal{
+    font-size:30px;
+    font-weight:bold;
+    color: #fe6a00;
+}
+#pay-total{
+    font-size:24px;
+    font-weight:bold;
+    color: #fe6a00;
+}
+#pay-sale{
+    color: #fe6a00;
+}
+.pay-vip-result a:hover {
+    background-color: #ebc089;
+    border:1px solid #ebc089;
+}
+.pay-vip-terms {
+    margin-top: -15px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+}
+.tips-box {
+    color: #999;
+    line-height: 1.6;
+}
+.tips-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+.tips-box .question-box {
+    margin-bottom: 5px;
+}
+.tips-box .question-box:last-of-type {
+    margin-bottom: 0;
+}
+.tips-box .question-box .title {
+    font-size: 14px;
+    color: #999;
+}
+.tips-box .question-box .answer {
+    margin-top: 0;
+    color: #999;
+    font-size: 14px;
+}
+
+/* 礼券样式 */
+.pay-goninghao{
+    text-align: center;
+    margin: 50px 0;
+}
+.pay-goninghao a {
+    border:1px solid #ae4141;
+    padding: 10px 90px;
+    background-color: #ae4141;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.vouth-info-item {
+    width: 540px;
+    margin: 0 auto;
+}
+.vouth-info {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 80px;
+    background: #F2D4A2;
+    background: -webkit-linear-gradient(to left, #F2D4A2, #E7B973);
+    background: linear-gradient(to left, #F2D4A2, #E7B973);
+    padding: 10px 15px;
+    margin: 25px 5px 0 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #835B24;
+}
+.vouth-info-sel {
+    border: 2px solid #E7B973 !important;
+}
+.vouth-info-sel::after {
+    content: "";
+    width: 22px;
+    height: 15px;
+    position: absolute;
+    background: url("../image/select-icon.png") no-repeat;
+    right: 0;
+    bottom: 0;
+}
+.vouth-info-price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.vouth-info-expiretime {
+    margin-top: 10px;
+}
+.vouth-info-type {
+    color: #fe6a00;
+    font-size: 11px;
+}
+.vouth-info-code {
+    color: #9e9e9e;
+}
+
+/* 福利提示样式 */
+.pay-with-voucher-tip, .pay-without-voucher-tip { position: relative; padding: 12px 0; font-size: 16px; text-align: center; background-color: #FCF4E9; color: #ca8308; }
+.pay-with-voucher-tip::before, .pay-without-voucher-tip::before { content: ''; position: absolute; top: -12px; left: 114px; z-index: -1; border-width: 0 14px 14px 14px; border-style: solid; border-color: transparent transparent #FCF4E9 transparent; }
+.pay-with-voucher-tip { cursor: pointer; }
+.pay-with-voucher-tip span {color: #fe6a00; font-weight: 600;}
+.pay-with-voucher-tip > strong { margin: 0 0.4em; color: #fe6a00; }
+
+.layer-title-all { margin-bottom: 20px; }
+.all-situations-tip {  background: linear-gradient(90deg, #55504E 0%, #372F2F 100%); color: #F1CC7B; font-size: 16px; font-weight: 600; padding: 8px 24px; border-radius: 20px; margin: auto; width: fit-content; }
+
+
+.coursepack-allvip-header { font-size: 22px; font-weight: 600; background-image: url('../image/allvip-decorate.png'); background-repeat: no-repeat; background-position: center; background-size: 65%; text-align: center; margin-bottom: 28px; }
+.coursepack-svip-header { font-size: 22px; font-weight: 600; background-image: url('../image/svip-decorate.png'); background-repeat: no-repeat; background-position: center; background-size: 65%; text-align: center; margin-bottom: 28px; }
+.highlight { font-size: 18px; }

@@ -1,0 +1,205 @@
+
+/* --------------------- 业务通用样式 --------------------- */
+
+/**
+ * w3c-编程狮 - 业务通用样式表
+ * @author : ahong
+ * @version : 0.0.1
+ * @ideal : 全站式的、适用性强的、使用 less 或 sass 编译
+ */
+
+
+/* ======= 滑动拼图验证 ======= */
+.slideImgAuthcode { font-size: 14px; line-height: 1.5; }
+.slideImgAuthcode .slide-img { overflow: hidden; border-radius: 4px; }
+.slideImgAuthcode .slide-img .point { float: left; width: 13px; height: 58px; }
+.slideImgAuthcode .slide-img .slice { box-sizing: border-box; position: relative; z-index: 1; border: 1px solid #fff; box-shadow: 0 0 15px #0cc; }
+.slideImgAuthcode .slide-img .tip { height: 100%; text-align: center; }
+.slideImgAuthcode .slide-img .tip::before { content: ""; height: 100%; display: inline-block; vertical-align: middle; }
+.slideImgAuthcode .slide-img .tip-inner { display: inline-block; vertical-align: middle; }
+
+.slideImgAuthcode .slide-bar { position: relative; height: 32px; margin-top: 10px; }
+.slideImgAuthcode .slide-bar-text { height: 100%; text-align: center; line-height: 32px; color: #1890ff; background-color: #e6f7ff; border-radius: 16px; }
+.slideImgAuthcode .slide-bar-bg { position: absolute; top: 0; left: 0; z-index: 1; width: 32px; height: 100%; text-align: center; line-height: 32px; color: #fff; background-color: #1890ff; border-radius: 16px; }
+.slideImgAuthcode .slide-bar-bg-error { background-color: #ff4d4f; }
+.slideImgAuthcode .slide-bar-btn { position: absolute; top: 0; left: 0; z-index: 2; width: 32px; height: 32px; line-height: 32px; text-align: center; background-color: #fff; border-radius: 50%; box-shadow: 0 0 4px #1890ff; }
+.slideImgAuthcode .slide-bar-btn .i-icon { font-size: 18px; vertical-align: text-bottom; color: #1890ff; }
+.slideImgAuthcode .slide-bar-btn .i-icon-arrow-right { margin-left: 2px; }
+
+.slideImgAuthcode .slide-bar-text, .slideImgAuthcode .slide-bar-bg {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+/* ======= 登录、注册模块表单 ======= */
+/* ↓↓↓ 共有样式 ↓↓↓ */
+.lm-form { font-size: 14px; line-height: 1.5; }
+.lm-form a:hover { color: #fe6a00; -webkit-transition: color .24s; transition: color .24s; }
+.lm-form * { box-sizing: border-box; }
+
+.lm-form-item { position: relative; margin-bottom: 24px; }
+
+.lm-input-wrapper { position: relative; }
+.lm-input { width: 100%; height: 42px; padding: 4px 7px; font-size: 14px; color: #515a6e; border: 1px solid #dcdee2; border-radius: 4px; -webkit-transition: all .24s; transition: all .24s; }
+.lm-input:hover { border-color: #fe6a00; }
+.lm-input:focus { border-color: #fe6a00; box-shadow: 0 0 0 2px rgba(254, 106, 0, .2); }
+.lm-input-with-prefix { padding-left: 32px; }
+.lm-input-with-suffix { padding-right: 32px; }
+.lm-input-prefix, .lm-input-suffix { position: absolute; top: 0; z-index: 1; width: 32px; text-align: center; }
+.lm-input-prefix { left: 0; }
+.lm-input-suffix { right: 0; }
+.lm-input-prefix > .i-icon, .lm-input-suffix > .i-icon { font-size: 16px; line-height: 32px; color: #808695; }
+.lm-input-prefix > .hover-icon, .lm-input-suffix > .hover-icon { cursor: pointer; -webkit-transition: color .24s; transition: color .24s; }
+.lm-input-prefix > .hover-icon:hover, .lm-input-suffix > .hover-icon:hover { color: #333; }
+
+.lm-input-lg { height: 42px; padding: 6px 11px; font-size: 15px; }
+.lm-input-lg-with-prefix { padding-left: 42px; }
+.lm-input-lg-with-suffix { padding-right: 42px; }
+.lm-input-lg-prefix, .lm-input-lg-suffix { width: 42px; }
+.lm-input-lg-prefix > .i-icon, .lm-input-lg-suffix > .i-icon { font-size: 20px; line-height: 42px; }
+
+.lm-checkbox-wrapper { display: inline-block; cursor: pointer; }
+.lm-checkbox { position: relative; top: -1px; display: inline-block; font-size: 0; vertical-align: middle; }
+.lm-checkbox-input { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.lm-checkbox-inner { position: relative; display: inline-block; width: 16px; height: 16px; background-color: #fff; border: 1px solid #dcdee2; border-radius: 2px;
+    -webkit-transition: border-color .24s ease-in-out, background-color .24s ease-in-out;
+            transition: border-color .24s ease-in-out, background-color .24s ease-in-out;
+}
+.lm-checkbox-inner::after { content: ""; position: absolute; top: 1px; left: 4px; width: 4px; height: 8px; border-width: 0 2px 2px 0; border-style: solid; border-color: #515a6e;
+    -webkit-transform: rotate(45deg) scale(0);
+        -ms-transform: rotate(45deg) scale(0);
+            transform: rotate(45deg) scale(0);
+    -webkit-transition: all .24s ease-in-out;
+            transition: all .24s ease-in-out;
+}
+.lm-checkbox-wrapper:hover .lm-checkbox-inner, .lm-checkbox-input:checked + .lm-checkbox-inner { border-color: #a6a6a6; }
+.lm-checkbox-input:checked + .lm-checkbox-inner::after { -webkit-transform: rotate(45deg) scale(1); -ms-transform: rotate(45deg) scale(1); transform: rotate(45deg) scale(1); }
+.lm-checkbox-word { margin-left: 6px; color: #515a6e; }
+
+/* 表单项错误状态 */
+.lm-form-item-error-tip { display: none; position: absolute; top: 100%; left: 0; z-index: 1; padding-top: 6px; line-height: 1; color: #fd2d00; font-size: 12px; }
+.lm-form-item-error .lm-form-item-error-tip { display: block; }
+.lm-form-item-error .lm-input { border-color: #fd2d00; }
+.lm-form-item-error .lm-input:hover { border-color: #fd2d00; }
+.lm-form-item-error .lm-input:focus { border-color: #fd2d00; box-shadow: 0 0 0 2px rgba(253, 45, 0, .2); }
+
+/* 按钮 */
+.lm-btn { display: inline-block; height: 32px; padding: 0 15px; font-size: 14px; line-height: 30px; color: #515a6e; border: 1px solid #dcdee2; border-radius: 4px; background-color: #fff; cursor: pointer; -webkit-transition: all .24s; transition: all .24s; }
+.lm-btn:hover { color: #fe6a00; border-color: #fe6a00; }
+.lm-btn-lg { height: 42px; font-size: 15px; line-height: 40px; }
+.lm-btn-block { width: 100%; }
+
+.lm-btn-primary { color: #fff; border-color: #fe6a00; background-color: #fe6a00; height: 42px; }
+.lm-btn-primary:hover { color: #fff; border-color: rgba(254, 106, 0, .65); background-color: rgba(254, 106, 0, .65); }
+
+.lm-btn-text { color: #515a6e; border-color: transparent; background-color: transparent; }
+.lm-btn-text:hover { color: #fe6a00; border-color: transparent; }
+
+.lm-btn[disabled], .lm-btn[disabled]:hover { color: #c5c8ce; background-color: #f7f7f7; border-color: #dcdee2; cursor: not-allowed; }
+/* ↑↑↑ 共有样式 ↑↑↑ */
+
+
+/* 图片验证码表单项 */
+.lm-form-item.scode .lm-input { padding-right: 93px; }
+.lm-form-item.scode .lm-input-lg { padding-right: 111px; }
+.lm-form-item.scode .lm-input-suffix { width: auto; right: 77px; }
+.lm-form-item.scode .lm-input-lg-suffix { right: 94px; }
+.lm-form-item.scode .scode-img { position: absolute; top: 3px; right: 6px; height: 26px; cursor: pointer; }
+.lm-form-item.scode .scode-img-large { top: 5px; right: 7px; height: 32px; }
+
+/* 短信验证码表单项 */
+.lm-form-item.mcode .lm-input { padding-right: 130px; }
+.lm-form-item.mcode .lm-input-lg { padding-right: 140px; }
+.lm-form-item.mcode .lm-btn { position: absolute; top: 0; right: 0; font-size: 15px; color: #428bca; }
+.lm-form-item.mcode .lm-btn[disabled] { color: #c5c8ce; background-color: transparent; border-color: transparent; }
+
+/* 密码登录表单 */
+.lm-form.login-form .findpwd { color: #515a6e; }
+.lm-form.login-form .findpwd:hover { color: #fe6a00; }
+
+/* 注册表单 */
+.lm-form.regist-form .regist-agreement { color: #fe6a00; }
+.lm-form.regist-form .lm-form-item.auth .popup { display: none; position: absolute; left: 0; bottom: 125%; z-index: 2; width: 100%; padding: 24px 0 24px; background-color: #fff; border-radius: 4px; box-shadow: 0 1px 4px #aaa; }
+.lm-form.regist-form .lm-form-item.auth .popup-close { position: absolute; top: 3px; right: 3px; color: #999; cursor: pointer; transition: color .24s; }
+.lm-form.regist-form .lm-form-item.auth .popup-close > .i-icon { font-size: 21px; vertical-align: top; }
+.lm-form.regist-form .lm-form-item.auth .popup-close:hover { color: #444; }
+.lm-form.regist-form .lm-form-item.auth .popup .slideImgAuthcode { margin: 0 auto; }
+
+
+/* ======= 微信扫码登录、注册 ======= */
+.lm-wxAuthcode { font-size: 14px; }
+.lm-wxAuthcode .qrcode { width: 300px; height: 300px; margin: 0 auto; }
+.lm-wxAuthcode .sweep-info { margin-top: 12px; line-height: 28px; text-align: center; }
+.lm-wxAuthcode .sweep-info .i-icon { margin-right: 6px; font-size: 28px; color: #3bae56; vertical-align: top; }
+
+
+/* ======= 登录、注册模块 ======= */
+.lm-tabs { font-size: 14px; line-height: 1.5; }
+.lm-tabs div { box-sizing: border-box; }
+
+.lm-tabs-nav { position: relative; text-align: center; }
+.lm-tabs-tab { display: inline-block; padding: 14px 24px; color: #666; font-size: 16px; font-weight: 700; cursor: pointer; -webkit-transition: color .24s; transition: color .24s; }
+.lm-tabs-tab + .lm-tabs-tab { margin-left: 48px; }
+.lm-tabs-tab-active, .lm-tabs-tab:hover { color: #fe6a00; }
+.lm-tabs-ink { position: absolute; bottom: -2px; border-top: 2px solid #fe6a00; -webkit-transition: left .24s ease-in-out; transition: left .24s ease-in-out; }
+
+.lm-tabpanel { padding: 24px 0; }
+.lm-tabpanel-footer { text-align: center; color: #b5b9bd;  }
+.lm-tabpanel-footer .sns { display: inline-block; vertical-align: bottom; }
+.lm-tabpanel-footer .sns-label, .lm-tabpanel-footer .sns-list { display: inline-block; }
+.lm-tabpanel-footer .sns-label { padding-right: 8px; line-height: 32px; color: #666; }
+.lm-tabpanel-footer .sns-label::after { content: ":"; position: relative; top: -1px; margin-left: 2px; }
+.lm-tabpanel-footer .sns-list { padding: 2px 0; vertical-align: top; }
+.lm-tabpanel-footer .sns-a { display: inline-block; color: inherit; cursor: pointer; }
+.lm-tabpanel-footer .sns-a + .sns-a { margin-left: 8px; }
+.lm-tabpanel-footer .sns-a .i-icon { font-size: 28px; -webkit-transition: color .24s; transition: color .24s; }
+.lm-tabpanel-footer .sns-wechat:hover .i-icon { color: #3bae56; }
+.lm-tabpanel-footer .sns-qq:hover .i-icon { color: #56abe4; }
+.lm-tabpanel-footer .sns-github:hover .i-icon { color: #24292e; }
+.lm-tabpanel-footer .sns-weibo:hover .i-icon { color: #eb4738; }
+
+.lm-tabpanel-login .lm-tabpanel-footer .switch-loginType { color: #fe6a00; margin-right: 15px; padding: 0; border-left: none; border-right: none; }
+.lm-tabpanel-login .lm-tabpanel-footer .sns { padding-left: 15px; border-left: 1px solid #e8eaec; }
+
+.lm-tabpanel-regist .lm-tabpanel-footer .lm-btn { cursor: default; }
+.lm-tabpanel-regist .lm-tabpanel-footer .lm-btn-text:hover { color: #515a6e; }
+
+.lm-tabpanel-wxauth .other-ways { text-align: center; }
+
+
+/* ======= Modal of Login Module ======= */
+.lm-modal-mask, .lm-modal-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+.lm-modal-mask { z-index: 1000; background-color: rgba(0, 0, 0, .45); }
+.lm-modal-wrap { z-index: 1000; text-align: center; }
+.lm-modal-wrap::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+
+.lm-modal { position: relative; display: inline-block; width: 375px; text-align: left; vertical-align: middle; border-top: 2px solid #fe6a00; border-radius: 3px; background-color: #fff; }
+.lm-modal-close { position: absolute; top: 14px; right: 12px; z-index: 1; color: #999; cursor: pointer; transition: color .24s; }
+.lm-modal-close:hover { color: #444; }
+.lm-modal-close > .i-icon { font-size: 21px; vertical-align: top; }
+.lm-modal-header { padding: 14px 16px; border-bottom: 1px solid #e8eaec; color: #17233d; font-size: 16px; font-weight: 700; line-height: 21px; }
+.lm-modal-body { padding: 0 20px; }
+
+.lm-modal .lm-tabs-nav { text-align: left; }
+.lm-modal .lm-tabs-tab { margin-right: 12px; padding: 0 12px 0 0; color: inherit; font-weight: 400; border-right: 1px solid #e8eaec; }
+.lm-modal .lm-tabs-tab-active, .lm-modal .lm-tabs-tab:hover { color: #fe6a00; }
+.lm-modal .lm-tabs-tab + .lm-tabs-tab { margin-left: 0; margin-right: 0; padding-right: 0; border-right: none; }
+
+@media (max-width: 375px) {
+    .lm-modal { max-width: calc(100vw - 16px); }
+}
+
+/**********其他方式登录样式************/
+.other-ways .lm-btn {
+    border: 1px solid #fe6a00;
+    background: #fe6a00;
+    color: #fff;
+    height: auto;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 12px;
+}

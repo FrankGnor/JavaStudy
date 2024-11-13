@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>答案解析_蜗牛JAVA</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="Java 测验,Java" />
+  <meta name="description" content="Java 测验，Java，w3cschool题库" />
+  <link href="imgs/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="https://7n.w3cschool.cn/statics/w3c/iconfont/iconfont.css">
+  <link href="//www.w3cschool.cn/statics/css/w3.css" rel="stylesheet" />
+  <link href="//www.w3cschool.cn/statics/css/project.css" rel="stylesheet" type="text/css" />
+  <link href="css_topicTest/exam.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://7n.w3cschool.cn/statics/plugins/sweetAlert/css/sweet-alert.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://7n.w3cschool.cn/plugins/highlight/styles/default.css" rel="stylesheet" type="text/css" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="play-body">
+<div id="full-height-container">
+  <div class="head">
+    <div class="left">
+      <img src="imgs/logo.png" alt="" class="img1">
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html" style="color:#ffffff">首页</a></li>
+        <li><a href="topicTest.html?topic=-1" style="color:#ffffff">错题集</a></li>
+        <li><a href="tutorial/tutorial_index.html" style="color:#ffffff">JAVA教程</a></li>
+      </ul>
+    </div>
+    <div  id="right" >
+            <span class="login" id="login">
+                <a href="" id = "1">登录</a>
+            </span>
+      |
+      <span class="register" id="reg">
+                <a href="" id = "2">注册</a>
+            </span>
+
+    </div>
+
+  </div>
+  <script>
+    var apppath = '/exam/score';
+    var domain  = '//www.w3cschool.cn';
+
+  </script>
+  <!--header end-->
+  <div class="play-banner" id="exam-id" data-pid="6433">
+    <div class="index-wrapper">
+      <div class="play-banner-content">
+        <div class="bread-nav bread-nav-banner">
+
+        </div>
+        <h1 class="section-title" data-cid="">答案解析：</h1>
+
+      </div>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div class="play-content">
+      <div class="play-area">
+        <div class="play-progress">
+          <div class="exam-answer-info">
+            <span class="rightPercent">正确题数：1/6</span>
+
+            <span class="usedTime">用时：0:0:15</span>
+          </div>
+        </div>
+        <!--答题卡-->
+        <div class="exam-answercard exam-border-b">
+          <div class="exam-card-title">
+            <h4>答题卡</h4>
+            <span class="exam-card-sheet right">正确</span>
+            <span class="exam-card-sheet error">错误</span>
+            <span class="exam-card-sheet un">未答</span>
+          </div>
+          <div class="exam-card-info">
+            <ul class="exam-card-list" id="exam-card-list">
+
+            </ul>
+          </div>
+        </div>
+        <!--试卷区域-->
+        <div id="exam-area">
+        </div>
+        <div class="exam-operation">
+          <!-- <div class="exam-op-l pull-left">
+          <a href="javascript:;"><i class="click-icon"></i>加入错题集</a>
+          </div> -->
+          <div class="exam-op-r pull-right">
+            <button  id="deleteWrongQ" class="btn-submit exam-btn-jump " style="display: none; background-color:#ed9c28;border: none;">删除该题</button>
+            <a href="javascript:;" class="btn-submit exam-btn-jump exam-prev-btn">上一题</a>
+            <a href="javascript:;" class="btn-submit exam-btn-jump exam-next-btn">下一题</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-box"></div>
+  <!--引入底部-->
+  <footer>
+    <p>Copyright © 2022 上海蜗牛JAVA培训中心</p>
+  </footer>
+
+
+
+  <!-- 侧边工具栏：判断完页面是否植入美洽后再显示，防止闪烁 -->
+  <div id="toolbar" style="display: none;">
+    <div class="tool wechat">
+      <div class="tool-inner">
+        <div class="tool-icon"></div>
+        <div>关注有礼</div>
+      </div>
+      <div class="tool-popover">
+        <div class="tool-popover-inner">
+          <div class="img"><img src="imgs/wwz.jpg" alt="微信公众号" width="140" height="140"></div>
+          <p>扫码关注 领资料包</p>
+        </div>
+      </div>
+    </div>
+    <div class="tool backtop" data-visibility="50">
+      <div class="tool-inner">
+        <div class="tool-icon"></div>
+        <div>返回顶部</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/commonfooter.js" type="text/javascript"></script>
+<script src="js/ajaxdo.core.js" type="text/javascript"></script>
+<script src="js/axios.js"></script>
+<script>
+  function formateTime(time) {
+    const h = parseInt(time / 3600)
+    const minute = parseInt(time / 60 % 60)
+    const second = Math.ceil(time % 60)
+
+    const hours = h < 10 ? '0' + h : h
+    const formatSecond = second > 59 ? 59 : second
+    return `${hours > 0 ? `${hours}:` : '00:'}${minute < 10 ? '0' + minute : minute}:${formatSecond < 10 ? '0' + formatSecond : formatSecond}`
+  }
+
+
+  var Data = JSON.parse(localStorage.getItem('dataFORdisplay'));
+  var time = formateTime(parseInt(localStorage.getItem('timer')));
+  window.onload = function () {
+
+    //登陆后显示用户名
+    let username = localStorage.getItem('username');
+    if (username!=null){
+
+      $("#right .login").text("欢迎您:"+username);
+      $("#right .register #2").text("退出") ;
+      $("#right .register #2").attr("href","login.jsp");
+    }else {
+      $("#bg").attr("display")
+    }
+
+    let right = 0;
+    for (let i = 0;i<Data.length;i++){
+      if (Data[i].myStatus=="right"){
+        right +=1 ;
+      }
+    }
+
+
+    //动态加载页面
+    $(".usedTime").html("用时："+time);
+    $(".rightPercent").html("正确题数："+right+"/"+Data.length);
+    let ansData = "";
+    let ansList = "";
+    for (let i = 0;i<Data.length;i++){
+      let ans = Data[i];
+      if (ans.qtype == 1)
+      {
+        ansData += '<div class="play-item" data-qid="'+ans.qNo+'" data-qtype="1" style="display:none;">\n'+
+                '    <div class="play-title">\n'+
+                '        <div class="exam-title"><div style="display: inline-block;vertical-align: top;float:left;">'+(i+1)+'. </div><div style="display: inline-block;max-width:870px;float:left;">'+ans.qTitle+'</div>\n'+
+                '        </div>\n'+
+                '    </div>\n'+
+                '    <div class="play-exam-content">\n'+
+                '        <!--题目描述显示区域-->\n'+
+                '        <div class="content-intro">\n'+
+                '        </div>\n'+
+                '        <div class="play-exam-result">\n'+
+                '            <p>正确答案: <span class="rig" id="rightAnswer">'+ans.answer+'</span></p>\n'+
+                '            <p>你的答案: <span class="rig" id="myAnswer">'+ans.myAnswer+'</span></p>\n'+
+                '            <!-- <p>你的答案: <span class="err">B（错误）</span></p>\n'+
+                '        <p>你的答案: <span>空</span></p>\n'+
+                '        <p>正确答案: <span class="rig-icon"></span></p>\n'+
+                '        <p>错误答案: <span class="err-icon"></span></p> -->\n'+
+                '        </div>\n'+
+                '        <div class="answer-area answer-result-area">\n'+
+                '            <!--单选-->\n'+
+                '            <div class="exam-option exam-choose" data-options="A">\n'+
+                '                <label class="radio">\n'+
+                '                    <span class="icons icons-checked"></span>\n'+
+                '                    <span class="exam-option-content">\n'+
+                '                        <div style="display: inline-block;vertical-align: top;">A.</div><div style="display: inline-block;max-width:830px;margin-left: 5px;">'+ans.choice1+'</div>\n'+
+                '                    </span>\n'+
+                '                </label>\n'+
+                '            </div>\n'+
+                '            <div class="exam-option exam-choose" data-options="B">\n'+
+                '                <label class="radio ">\n'+
+                '                    <span class="icons "></span>\n'+
+                '                    <span class="exam-option-content">\n'+
+                '                        <div style="display: inline-block;vertical-align: top;">B.</div><div style="display: inline-block;max-width:830px;margin-left: 5px;">'+ans.choice2+'</div>\n'+
+                '                    </span>\n'+
+                '                </label>\n'+
+                '            </div>\n'+
+                '            <div class="exam-option exam-choose" data-options="C">\n'+
+                '                <label class="radio">\n'+
+                '                    <span class="icons "></span>\n'+
+                '                    <span class="exam-option-content">\n'+
+                '                        <div style="display: inline-block;vertical-align: top;">C.</div><div style="display: inline-block;max-width:830px;margin-left: 5px;">'+ans.choice3+'</div>\n'+
+                '                    </span>\n'+
+                '                </label>\n'+
+                '            </div>\n'+
+                '            <div class="exam-option exam-choose" data-options="D">\n'+
+                '                <label class="radio ">\n'+
+                '                    <span class="icons "></span>\n'+
+                '                    <span class="exam-option-content">\n'+
+                '                        <div style="display: inline-block;vertical-align: top;">D.</div><div style="display: inline-block;max-width:830px;margin-left: 5px;">'+ans.choice4+'</div>\n'+
+                '                    </span>\n'+
+                '                </label>\n'+
+                '            </div>\n'+
+                '        </div>\n'+
+                '    </div>\n'+
+                '    <!--解析-->\n'+
+                '    <div class="exam-analysis">\n'+
+                '        <div class="exam-analysis-info">\n'+
+                '            <p><a href="/demo/SearchServlet?keyword='+ans.point+'">知识点：'+ans.point+'</a></p>\n'+
+                '            <p>解析：'+ans.detail+'</p>\n'+
+                '        </div>\n'+
+                '    </div>\n'+
+                '    <!--题目显示区域结束-->\n'+
+                '</div>\n'
+      }else if (ans.qtype == 3)
+      {
+        ansData += '<div class="play-item" data-qid="'+ans.qNo+'" data-qtype="3" style="display:none;">\n'+
+                '    <div class="play-title">\n'+
+                '    <div class="exam-title">\n'+
+                '    <div style="display: inline-block;vertical-align: top;float:left;">'+(i+1)+'.</div><div style="display: inline-block;max-width:870px;float:left;">判断题</div>\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    <div class="play-exam-content">\n'+
+                '    <!--题目描述显示区域-->\n'+
+                '    <div class="content-intro">\n'+
+                '       \n'+
+                '    <blockquote><p>&nbsp;'+ans.qTitle+'</p></blockquote><p><br></p></div>\n'+
+                '    <div class="play-exam-result">\n'+
+                '    <p>正确答案: <span class="rig" id="rightAnswer">'+ans.answer+'</span></p>\n'+
+                '    <p>你的答案: <span class="rig" id="myAnswer">'+ans.myAnswer+'</span></p>\n'+
+                '    <!-- <p>你的答案: <span class="err">B（错误）</span></p>\n'+
+                '    <p>你的答案: <span>空</span></p>\n'+
+                '    <p>正确答案: <span class="rig-icon"></span></p>\n'+
+                '    <p>错误答案: <span class="err-icon"></span></p> -->\n'+
+                '    </div>\n'+
+                '    <div class="answer-area answer-result-area">\n'+
+                '    <!--判断-->\n'+
+                '    <div class="exam-option exam-choose" data-options="A">\n'+
+                '    <label class="radio ">\n'+
+                '    <span class="icons icons-checked"></span>\n'+
+                '    <span class="exam-option-content">正确</span>\n'+
+                '    </label>\n'+
+                '    </div>\n'+
+                '    <div class="exam-option exam-choose" data-options="B">\n'+
+                '    <label class="radio ">\n'+
+                '    <span class="icons "></span>\n'+
+                '    <span class="exam-option-content">错误</span>\n'+
+                '    </label>\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    <!--解析-->\n'+
+                '    <div class="exam-analysis">\n'+
+                '    <div class="exam-analysis-info">\n'+
+                '    <p><a href="/demo/SearchServlet?keyword='+ans.point+'">知识点：'+ans.point+'</a></p>\n'+
+                '    <p>解析：'+ans.detail+'</p>\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    <!--题目显示区域结束--> \n'+
+                '    </div>\n'
+      }else if(ans.qtype == 5){
+        ansData += '<div class="play-item" data-qid="'+ans.qNo+'" data-qtype="5" style="display: none;">\n'+
+                '    <div class="play-title">\n'+
+                '        <div class="exam-title">\n'+
+                '            <div style="display: inline-block;vertical-align: top; float:left;">'+(i+1)+'.程序填空题 (请遵守编译器对空格的规范，否则系统将自动识别为错误)</div>\n'+
+                '        </div>\n'+
+                '    </div>\n'+
+                '    <div class="play-exam-content">\n'+
+                '        <!--题目描述显示区域-->\n'+
+                '        <div class="content-intro">\n'+
+                '            <p style="text-align:center"><img src="'+ans.qTitle+'" alt="t'+(i+1)+'"></p>\n'+
+                '            <p><br></p>\n'+
+                '        </div>\n'+
+                '    <div class="play-exam-result">\n'+
+                '    <p>正确答案: <span class="rig" id="rightAnswer">'+ans.answer+'</span></p>\n'+
+                '    <p>你的答案: <span class="rig" id="myAnswer">'+ans.myAnswer+'</span></p>\n'+
+                '    <!-- <p>你的答案: <span class="err">B（错误）</span></p>\n'+
+                '    <p>你的答案: <span>空</span></p>\n'+
+                '    <p>正确答案: <span class="rig-icon"></span></p>\n'+
+                '    <p>错误答案: <span class="err-icon"></span></p> -->\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    <!--解析-->\n'+
+                '    <div class="exam-analysis">\n'+
+                '    <div class="exam-analysis-info">\n'+
+                '    <p><a href="/demo/SearchServlet?keyword='+ans.point+'">知识点：'+ans.point+'</a></p>\n'+
+                '    <p>解析：'+ans.detail+'</p>\n'+
+                '    </div>\n'+
+                '    </div>\n'+
+                '    <!--题目显示区域结束-->\n'+
+                '</div>\n';
+      }
+
+      ansList += '<li data-qid="'+ans.qNo+'">\n'+
+              '    <div class="exam-card-sheet '+ans.myStatus+'">\n'+
+              '      <a href="javascript:;" id="'+ans.qNo+'">'+(i+1)+'</a>\n'+
+              '    </div>\n'
+    }
+    document.getElementById("exam-card-list").innerHTML = ansList;
+    document.getElementById("exam-area").innerHTML = ansData;
+
+
+
+
+
+
+
+    var thisq = 0;
+    $("#exam-area .play-item:first").show();
+    thisq = $("#exam-area .play-item:first").attr("data-qid");
+    $(".exam-prev-btn").hide();
+    if (document.getElementById("exam-card-list").innerHTML === ansList && document.getElementById("exam-area").innerHTML === ansData){
+      setAnswer(thisq);
+    }
+
+
+
+    //点答题卡跳转题目
+    $(".exam-card-list li").on("click",function(){
+      var qid = $(this).attr("data-qid");
+      $("#exam-area .play-item").hide();
+      $("#exam-area .play-item[data-qid='"+qid+"']").show();
+      $(".exam-next-btn").show();
+      $(".exam-prev-btn").show();
+      if($("#exam-area .play-item[data-qid='"+qid+"']").next().length == 0){
+        $(".exam-next-btn").hide();
+      }else if($("#exam-area .play-item[data-qid='"+qid+"']").prev().length == 0){
+        $(".exam-prev-btn").hide();
+      }
+      thisq = qid;
+      setAnswer(thisq);
+    });
+    //下一题
+    $(".exam-next-btn").on("click",function(){
+      var thisInfo = $("#exam-area .play-item[data-qid='"+thisq+"']");
+      var nextInfo = thisInfo.next();
+
+      if(nextInfo.next().length == 0){
+        $(".exam-next-btn").hide();
+      }else{
+        $(".exam-next-btn").show();
+      }
+      $(".exam-prev-btn").show();
+      thisq = nextInfo.attr("data-qid");
+      thisInfo.hide();
+      nextInfo.show();
+      setAnswer(thisq);
+    });
+    //上一题
+    $(".exam-prev-btn").on("click",function(){
+      var thisInfo = $("#exam-area .play-item[data-qid='"+thisq+"']");
+      var prevInfo = thisInfo.prev();
+
+      if(prevInfo.prev().length == 0){
+        $(".exam-prev-btn").hide();
+      }else{
+        $(".exam-prev-btn").show();
+      }
+      $(".exam-next-btn").show();
+      thisq = prevInfo.attr("data-qid");
+      thisInfo.hide();
+      prevInfo.show();
+      setAnswer(thisq);
+    });
+    
+    //当其为错题集时，设置删除按钮，获取当前q_no并删除该错题
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return decodeURI(r[2]);
+      return null;}
+    let topic = getQueryString('topic');
+    if (parseInt(topic)===-1){
+      $("#deleteWrongQ").show();
+      $("#deleteWrongQ").on("click",function(){
+        axios({
+          method: "post",
+          url: "/demo/DeleteQServlet",
+          params:{username:username,q_no:thisq},
+        }).then(function (resp) {
+
+          alert(thisq+"号题已被删除")
+        })
+      })
+    }
+
+    function setAnswer(qid){
+      var thisInfo  = $("#exam-area .play-item[data-qid='"+qid+"']");
+      var rigAnswer = [];
+      var usrAnswer = [];
+      var qtype = thisInfo.attr("data-qtype");
+      if(qtype == 10 || qtype == 11 || qtype == 12){
+        $(".play-exam-result").hide();
+      }else{
+        $(".play-exam-result").show();
+      }
+      if(qtype == 1 || qtype == 2 || qtype == 3){
+        $("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result p:first").next().find("span").removeClass();
+        rigAnswer.push($("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result #rightAnswer").text());
+        usrAnswer.push($("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result #myAnswer").text());
+        if(rigAnswer.length != 0){
+          $("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result span:first").html(rigAnswer.join(","));
+          if(usrAnswer.length != 0){
+            if(rigAnswer.join(",") == usrAnswer.join(",")){
+              $("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result #myAnswer").addClass("rig");
+            }else{
+              $("#exam-area .play-item[data-qid='"+qid+"'] .play-exam-result #myAnswer").addClass("err");
+            }
+          }
+        }else{
+          // $(".play-exam-result span").html("空");
+        }
+      }else{
+        if(qtype == 5){
+        }
+        // $(".play-exam-result span").html("空");
+      }
+    }
+  }
+
+
+</script>
+
+
+
+
+
+
+
+<!--以下代码已废用，请勿浪费时间-->
+
+</body>
+</html>

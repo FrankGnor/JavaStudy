@@ -1,0 +1,542 @@
+/* --------------------------- 题库页面样式 ---------------------------- */
+/****** 题库列表页 ******/
+.pro-item {
+    width: 22.5%;
+    height: 100px;
+    border-radius: 6px;
+    text-align: center;
+}
+.pro-item a {
+    height: auto;
+}
+.pro-item-img {
+    float: none;
+    text-align: center;
+}
+.pro-item-img img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.pro-item-desc {
+    margin-left: 0;
+    margin-top: 5px;
+}
+.pro-item-desc h4 {
+    margin-bottom: 5px;
+}
+.pro-item-desc p {
+    display: block;
+    min-height: 20px;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.pro-item-desc .viewcount {
+    margin-top: 10px;
+}
+.group-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url("//7n.w3cschool.cn/statics/images/w3c/group-icon.png") no-repeat scroll 0% 0%;
+    margin-right: 5px;
+}
+.exam-tag {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px 5px;
+    color: #fff;
+    line-height: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 4px;
+}
+.vip-exam-tag {
+    background-color: #ffa01a;
+}
+.svip-exam-tag {
+    background-color: #ff5900;
+}
+
+/****** 题库做题页 ******/
+/* 头部banner */
+.play-body #navfirst_item {
+    display: none;
+}
+.play-banner {
+    width: 100%;
+    min-width: 1129px;
+    background: #6b63d0;
+    background: -webkit-linear-gradient(to right, #6b63d0, #00dbde);  
+    background: linear-gradient(to right, #6b63d0, #00dbde);
+}
+.play-banner-content,.play-content {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+.play-banner-content .section-title {
+    padding-top: 40px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+}
+.nav-courselist {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 110px;
+    height: 38px;
+    line-height: 36px;
+    background-color: #f0ad4e;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+}
+.nav-courselist:hover {
+    background-color: #ed9c28;
+    color: #fff;
+}
+/* 做题区域 */
+.play-body #wrapper {
+    margin: 0 auto 45px;
+}
+.play-area {
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    min-height: 400px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+.play-progress {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+    padding: 0 25px;
+}
+.progress-info {
+    width: 70%;
+    display: inline-block;
+    height: 12px;
+    overflow: hidden;
+    background-color: #ebedef;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+.progress-info .progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    line-height: 20px;
+    background-color: #57b5e3;
+}
+.progress-nums {
+    font-size: 20px;
+    color: #333;
+}
+.progress-time {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    background-color: #ebebeb;
+    color: #333;
+    font-size: 15px;
+    text-align: center;
+}
+.exam-answer-info {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.exam-answer-info span {
+    margin-right: 15px;
+}
+/* 内容 */
+.play-item {
+    padding: 20px 30px;
+    overflow: hidden;
+}
+.play-title .content-title {
+    font-size: 20px;
+    color: #333;
+}
+.play-title .exam-title {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    font-weight: 500;
+}
+.play-exam-content {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #333;
+}
+.play-exam-content .content-intro {
+    padding: 0;
+    font-size: 15px;
+}
+.exam-operation {
+    padding: 0 30px 40px;
+    overflow: hidden;
+}
+.exam-op-l a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 15px;
+    color: #333;
+    line-height: 42px;
+}
+.exam-op-l a:hover {
+    color: #d9534f;
+}
+.click-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    background: #d9534f url("//7n.w3cschool.cn/statics/images/w3c/add-icon2.png") no-repeat scroll 0% 0%;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.btn-submit {
+    display: inline-block;
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #57b5e3;
+    color: #fff;
+}
+.btn-submit:hover {
+   background-color: #4bbcf4;
+   color: #fff;
+}
+.exam-btn-jump {
+    margin-left: 15px;
+}
+.exam-btn-submit {
+    background-color: #f0ad4e;
+}
+.exam-btn-submit:hover {
+    background-color: #ed9c28;
+    color: #fff;
+}
+.exam-choose {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.exam-option-content {
+    display: flex;
+    /*display: inline-block;*/
+}
+.exam-choose .exam-option-content {
+    vertical-align: top;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-left: 10px;
+}
+.exam-choose .checkbox, .exam-choose .radio {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    /*display: inline-block;*/
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+.rig {
+    color: #5cb85c;
+}
+.err {
+    color: #d2322d;
+}
+.rig-icon{
+    color: #5cb85c;
+    border:1px solid #5cb85c;
+    background-color: #5cb85c;
+    min-width: 15px;
+    min-height: 15px;
+    display: inline-block;
+}
+.err-icon{
+    color: #d2322d;
+    border:1px solid #d2322d;
+    background-color: #d2322d;
+    min-width: 15px;
+    min-height: 15px;
+    display: inline-block;
+}
+.exam-choose .checkbox input, .exam-choose .radio input {
+    /*display: none;*/
+}
+.exam-choose .checkbox .icons,.exam-choose .radio .icons,.exam-option .icons {
+    border: 1px solid #aaa;
+    vertical-align: -3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 2px;
+    line-height: normal;
+    position: relative;
+}
+.exam-choose .radio .icons,.exam-option .icons{
+    border-radius: 50%;
+}
+.exam-choose .checkbox.checked .icons, .exam-choose .radio.checked .icons {
+    border: 1px solid #1bcc68;
+    background: #1bcc68;
+}
+.fill-box {
+    display: inline-block;
+    width: 54px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #888;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0 5px;
+    margin: 5px 3px;
+}
+.fill-box-content {
+    display: inline-block;
+    width: 54px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px 3px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.fill-box-content[data-aid] {
+    border-color: #69bd1f;
+}
+.fill-box-content[data-aid="0"] {
+    border-color: #000;
+}
+.input-box {
+    border: none;
+    text-align: left;
+}
+.fill-box:focus,.fill-box:hover {
+    box-shadow: 1px 1px 5px #666;
+}
+.choose-fill-box {
+    vertical-align: middle;
+    width: auto;
+    min-width: 54px;
+}
+.exam-choose-fill .fill-box {
+    float: left;
+    width: auto;
+    min-width: 54px;
+    margin: 10px 17px 10px 3px;
+    color: #69bd1f;
+    cursor: pointer;
+}
+.exam-choose-fill .fill-box.checked {
+    color: #999;
+}
+.exam-drag-sort {
+    margin-top: 5px;
+    padding: 15px 20px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+.exam-drag-sort:hover {
+    box-shadow: 1px 1px 5px #888;
+    cursor:pointer;
+}
+.exam-drag-sort span {
+    display: inline-block;
+    max-width: 90%;
+    white-space: pre-wrap;
+}
+.play-drag-sort {
+    background: url("//7n.w3cschool.cn/statics/images/w3c/play-drag-sort.png");
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-right: 20px;
+}
+.exam-radio {
+    display: none;
+}
+.op-checked {
+    box-shadow: 2px 2px 3px #ccc;
+}
+.icons-checked {
+    border: 1px solid #4caf50 !important;
+    background: url("//7n.w3cschool.cn/statics/images/w3c/icons-checked.png") !important;
+}
+.answer-result-area .icons {
+    border: 1px solid #ededed !important;
+    background: url("//7n.w3cschool.cn/statics/images/w3c/icons-checked-disabled.png") !important;
+}
+.fill-box-as-checked {
+    color: #999 !important;
+}
+.fill-box-as-checked:hover {
+    cursor: default;
+}
+.play-body .content-intro input.input-box {
+    font-family: arial;
+    font-size: 26px;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #333;
+    border-radius: unset;
+    padding: 0;
+    height: auto;
+    text-align:center;
+}
+.play-body .content-intro input.input-box:focus {
+    border-bottom: 3px solid #090;
+}
+.preview-icon{
+    background-color: #ff5900;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 4px;
+}
+#qcontent[data-qtype="5"] p {
+    font-family: arial;
+    font-size: 26px;
+}
+/* 答案显示 */
+.play-exam-result {
+    padding-top: 20px;
+}
+.play-exam-result p {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 16px;
+    color: #333;
+}
+/* 答题卡 */
+.exam-answercard {
+    padding: 20px 30px;
+}
+.exam-border-t {
+    margin-top: 40px;
+    border-top: 1px dashed #ddd;
+}
+.exam-border-b {
+    border-bottom: 1px dashed #ddd;
+}
+.exam-card-title h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 15px;
+}
+.exam-card-title h4::before {
+    content: "";
+    background: #d9534f;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
+.exam-card-sheet {
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px 10px 0;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+.ed {
+    background-color: #57b5e3;
+    border-color: #57b5e3;
+}
+.un {
+    background-color: #cbcbcb;
+    border-color: #cbcbcb;
+}
+.right{
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+.error {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+.exam-card-list {
+    margin: 15px 0;
+}
+.exam-card-list li {
+    display: inline-block;
+    cursor: pointer;
+}
+.exam-card-list li a {
+    color: #fff;
+}
+.exam-card-list .ed:hover {
+    background-color: #4bbcf4;
+    border-color: #4bbcf4;
+    color: #fff;
+}
+.exam-card-list .un:hover {
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+    color: #fff;
+}
+.exam-card-list .right:hover {
+    background-color: #3cc051;
+    border-color: #3cc051;
+}
+.exam-card-list .error:hover {
+    background-color: #d2322d;
+    border-color: #d2322d;
+}
+/* 答案解析 */
+.exam-analysis {
+    padding: 30px 0;
+}
+.exam-analysis-info {
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+    border-radius: 0px 4px 4px 0;
+    background-color: #E8F6FC;
+    border-color: #57b5e3;
+} 
+.exam-analysis-info p {
+    line-height: 24px;
+    font-size: 15px;
+    color: #333;
+    margin: 0 0 5px;
+}
+.exam-analysis-info p:last-child {
+    margin-bottom: 0;
+}
+
+/***/
+.exam-title, .exam-analysis-info{
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    overflow: hidden;
+}

@@ -1,0 +1,217 @@
+/* ----------------------------------- download页面样式  ----------------------------------- */
+.go-btn {
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(237,124,48,0.1);
+    border: 1px solid #fe6a00;
+    color: #fe6a00;
+    border-radius: 24px;
+    font-size: 16px;
+    margin: 20px 0;
+    text-align: center;
+}
+.go-btn:hover {
+    background-color: #fe6a00;
+    color: #fff;
+}
+/* 吸顶 */
+.fixed-item {
+    height: 70px;
+    line-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 1px 1px 8px #ccc;
+    display: none;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: block;
+}
+.fixed-wrapper {
+    padding: 0;
+}
+.download-nav-title {
+   float: left;
+   width: 20%;
+   font-size: 16px;
+   color: #333;
+}
+.download-nav-title::before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    border-width: 8px 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fe6a00;
+    margin-bottom: -2px;
+}
+.download-nav-list {
+   float: right;
+   width: 80%;
+}
+.download-nav-box {
+    float: left;
+    width: 22.5%;
+    margin-left: 2.5%;
+}
+.download-nav-box .go-btn {
+    width: 140px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    margin: 16px auto;
+    background-color: #fe6a00;
+    color: #fff;
+    opacity: 0.8;
+}
+.download-nav-box .go-btn:hover {
+    opacity: 1;
+}
+/* banner */
+.download-banner {
+	width: 100%;
+    min-width: 1129px;
+	height: auto;
+    background: #fe6a00;  
+    background: -webkit-linear-gradient(to bottom, #fff8d4, #fe6a00);  
+    background: linear-gradient(to bottom, #fff8d4, #fe6a00);
+}
+.download-wrapper {
+    position: relative;
+    padding: 60px 0;
+}
+.slide-box {
+    float: left;
+    width: 60%;
+    font-size: 16px;
+    color: #333;
+}
+.slide-box2 {
+    width: 100%;
+    text-align: center;
+}
+.slide-box h1 {
+	font-size: 30px;
+    color: #fe6a00;
+    margin: 20px 0;
+}
+.slide-box .intro {
+	margin-top: 20px;
+	line-height: 30px;
+}
+.qr-box {
+    float: right;
+    width: 40%;
+}
+.tcode {
+    text-align: right;
+}
+.tcode-img {
+    display: inline-block;
+	width: 180px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+}
+.tcode-img2 {
+    margin-left: 25px;
+}
+.tcode p {
+    font-size: 14px;
+	color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+.cloud-bg {
+    width: 100%;
+    min-width: 1129px;
+    height: 120px;
+    background: url("../image/cloud-bg.png") no-repeat center center;
+    z-index: 100;
+}
+
+/* item-content */
+.section {
+    margin: 50px 0;
+    overflow: hidden;
+}
+.section2 {
+    margin: 25px 0;
+}
+.section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+.section p {
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    margin: 30px 0;
+}
+.section-img {
+    text-align: center;
+}
+.section2 h2 {
+	text-align: left;
+}
+.section2 .section-img {
+	float: left;
+	width: 50%;
+	position: relative;
+    text-align: left;
+    margin-right: 5%;
+}
+.section2 .section-block {
+	float: right;
+	width: 45%;
+    margin-top: 40px;
+}
+.section-block .intro {
+    width: 85%;
+	margin: 30px auto;
+	word-break: break-all;
+}
+.download-box {
+    float: left;
+    width: 50%;
+}
+.app-qrcode {
+	float: left;
+	margin-right: 5%;
+}
+.app-qrcode img {
+	width: 180px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+	padding: 5px;
+	border-radius: 4px;
+}
+.app-qrcode p {
+	margin: 5px 0 0;
+	text-align: center;
+}
+.demo-img {
+    position: relative;
+	width: 230px;
+}
+.demo-img2 {
+    position: relative;
+    width: 240px;
+	z-index: 100;
+}
+.demo-left {
+    left: -30px;
+}
+.wechatqr{
+    text-align:center;
+    padding: 25px 15px;
+}
+ 
