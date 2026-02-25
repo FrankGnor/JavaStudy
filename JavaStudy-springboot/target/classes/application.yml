@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/javastudy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.javastudy.pojo
+  mapper-locations: classpath*:com/javastudy/mapper/*.xml
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173
+  sms:
+    enabled: false
+    api-url: http://106.ihuyi.com/webservice/sms.php?method=Submit
+    account: ""
+    password: ""
